@@ -1,6 +1,22 @@
 var express = require('express');
 var router = express.Router();
 var users = require('../models/users')
+const mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'Password1!',
+  database: 'sakila'
+});
+
+connection.connect(function(err) {
+  if (err) {
+    console.error(err.message);
+    return;
+  }
+  console.log('Yay! You are connected to the database!');
+})
 
 /* GET home page. */
 router.get('/person/:id', function(req, res, next) {
