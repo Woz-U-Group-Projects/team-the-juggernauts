@@ -5,15 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('final-juggernauts:server');
+var debug = require('debug')('team-the-juggernauts:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3001');
-console.log("Listening on " + port);
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
