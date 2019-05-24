@@ -83,7 +83,7 @@ body{
 #form1{
   flex: 100%;
   float:right;
-    background-image:url( "/photos/bone.bmp");
+    background-image:url( "./photos/bone.bmp");
     
     max-width: 100%;
     height: auto;
@@ -102,7 +102,7 @@ body{
 #form2{
   flex: 100%;
   float:left;
-  background-image:url( "/photos/bone.bmp");
+  background-image:url( "./photos/bone.bmp");
     max-width: 100%;
     height: auto;
    
