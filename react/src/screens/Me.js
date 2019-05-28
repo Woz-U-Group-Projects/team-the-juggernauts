@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
 
-const Topics = () => <Header title="Topics" />;
+const Me = () => <Header title="Me" />;
 
-export default Topics;
+export default Me;

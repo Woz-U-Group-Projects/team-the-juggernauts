@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
 
-const About = () => <Header title="About" />;
+const Photos = () => <Header title="Photos" />;
 
-export default About;
+export default Photos;
