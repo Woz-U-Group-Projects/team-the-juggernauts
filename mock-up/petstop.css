@@ -1,0 +1,203 @@
+.col-lg-2{
+  flex:100%;
+   padding: 2px; 
+   border:1em solid rgb(109, 8, 55); 
+   height: 18em;
+   width:auto; 
+align-items: center;
+
+position: relative;
+
+
+
+ }
+
+ .col-lg-4{
+   flex: 100%;
+  padding: 5px; 
+  align-items: center;
+  height: 38em;
+  width:23em; 
+ 
+}
+.responsive {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+
+}
+
+#container2{
+  background-color: yellow;
+  width: 27%;
+  float: left;
+  max-width: 33%;
+  height: auto;
+ 
+ 
+}
+
+#container{
+  background-color: yellow;
+  width: 27%;
+  float: right;
+  height: auto;
+}
+
+#p1{ 
+  font-size:3em;
+  color: purple;
+}
+
+#container4{
+  background-color: yellow;
+  width: 33%;
+  right:33%;
+  height: auto;
+  border: 1em solid rgba(153, 236, 44, 0.808);
+ 
+ 
+}
+
+#container5{
+  background-color: yellow;
+  width: 33%;
+  right:33%;
+
+  border: 1em solid rgb(103, 20, 212);
+  max-width: 100%;
+    height: auto;
+   
+  float: right;
+  
+}
+
+
+
+body{
+    background-color: rgb(54, 192, 247);
+}
+
+#form1{
+  flex: 100%;
+  float:right;
+    background-image:url( "./photos/bone.bmp");
+    
+    max-width: 100%;
+    height: auto;
+   
+     opacity: .70;
+    filter: alpha(opacity=75); /* For IE8 and earlier */
+
+    
+    color: rgb(230, 44, 183); 
+
+    font-weight: bolder;
+    font-size: 2em;
+
+}
+
+#form2{
+  flex: 100%;
+  float:left;
+  background-image:url( "./photos/bone.bmp");
+    max-width: 100%;
+    height: auto;
+   
+     opacity: .70;
+    filter: alpha(opacity=75); /* For IE8 and earlier */
+
+    
+    color: rgb(230, 44, 183); 
+
+    font-weight: bolder;
+    
+
+}
+
+
+
+
+#humm{
+    float: right;
+}
+
+header{
+  background-color: rgb(124, 206, 238);
+}
+
+
+
+body {
+    margin: 0;
+    font-family:cursive;
+    background-color: rgb(63, 224, 63);
+
+  }
+  
+  .hero-image {
+    background-image: url("./photos/puppy-banner.jpg");
+   
+    background-color: #cccccc;
+    height: 500px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 2em dashed red;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(35, 209, 87);
+    font-weight: bolder;
+  }
+
+
+h2{
+  color: red;
+}
+h1{
+  color: red;
+}
+
+#bone{
+  width: 88%;
+  height: 50%;
+}
+.signup{
+  float: left;
+}
+
+
+.signin{
+  float: right;
+}
+
+.menu {
+  float: left;
+  width: 25%;
+}
+
+.main {
+  float: left;
+  width: 75%;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+      background-color: rgb(13, 223, 93);
+  }
+  .menu, .main {
+      width: 100%;
+  }
+}
+
+

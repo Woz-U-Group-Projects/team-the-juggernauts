@@ -1,37 +1,45 @@
+module.exports = function (sequelize, DataTypes) {
+  return sequelize.define('users', {
+    users_id: {
+      type: DataTypes.INTEGER(5).UNSIGNED,
+      allowNull: false,
+      primaryKey: true
+    },
+    owner_first_name: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    owner_last_name: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    pets_name: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    fav_toy: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    breed: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    hometown: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    fav_place: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    join_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+    }
+  }, {
+    tableName: 'users'
+  });
+};
 
-
-//these are just examples and not apart of the project! JM //
-module.exports.people = [
-  {
-    id: 3412,
-    name: 'Sarah Taylor',
-    username: 'sarah.taylor3',
-    age: 54
-  },
-  {
-    id: 5329,
-    name: 'Clara Tabby',
-    username: 'clara.tabby44',
-    age: 28
-  },
-  {
-    id: 9384,
-    name: 'Trent Anderson',
-    username: 'anderson_trent93',
-    age: 31
-  },
-  {
-    id: 2930,
-    name: 'Jeremy Hudson',
-    username: 'jerbear22',
-    age: 44
-  },
-  {
-    id: 5723,
-    name: 'David Marling',
-    username: 'dave.mar.ling',
-    age: 23
-  }
-];
-
-//comment//
