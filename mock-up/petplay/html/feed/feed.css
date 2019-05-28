@@ -1,0 +1,262 @@
+body{
+    background-color: rgba(128, 0, 128, 0.486);
+    border: 1em solid red;
+}
+
+header{
+    background-color: rgba(128, 0, 128, 0.486);
+height: auto;
+width: auto;
+border: 3em outset purple;
+}
+
+p{
+    font-family: cursive;
+    font-size: 3em;
+    font-weight: 900;
+    color: #5d0aa1;
+}
+
+footer{
+   background-color: #a8f16b
+}
+
+
+  #ughoh{
+      background-color: #1caff6;
+  }
+
+
+#backyard{
+    height: 15em;
+    width: auto;
+}
+
+
+#playing{
+    height: 23em;
+    width: auto;
+}
+
+#dognball{
+    height: 15em;
+    width: auto;
+}
+
+#dogbowl{
+    height: 15em;
+    width: auto;
+    float: left;
+}
+
+#scroll{
+    height:23em;
+    width: auto;
+    float: right;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+ }
+
+
+ #emoji{
+    height:6em;
+    width: auto;
+    float: right;  
+ }
+
+ #one{
+background-color: #1caff6;
+height: 15em;
+width: auto;
+border: 1px solid blue;
+
+ }
+
+
+#two{
+    background-color: #d878f5;
+    height: 15em;
+    width: auto;
+   border: 1px solid blue;
+   
+}
+
+#three{
+    background-color: #a8f16b;
+    height: 15em;
+    width: auto;
+   border: 1px solid blue;
+    
+}
+
+
+#four{
+    background-color: #fc10b5;
+    height:23em;
+    width: auto;
+   border: 1px solid blue;
+    
+}
+ 
+
+#five{
+    background-color: #f8dd64;
+    height: 23;
+    width: 23;
+   border: 1px solid blue;
+    
+}
+ 
+
+#six{
+    background-color: #d878f5;
+    height: 23;
+    width: 23;
+   border: 1px solid blue;
+    
+}
+ 
+#seven{
+    background-color: #5d0aa1;
+    height: 23;
+    width: 23;
+   border: 1px solid blue;
+    
+}
+ 
+
+ 
+    
+
+ .calendar
+ {
+     background-color: rgb(245, 186, 23);
+     padding: 5em;
+     height: 23;
+    width: 23;
+   border: 1px solid blue;
+    
+ }
+ 
+ .calendar .dropdown
+ {
+     display: none;
+     position: absolute;
+     background-color: rgb(70, 129, 240);
+     color: #1caff6;
+     text-align: center;
+     font-size: 14pt;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 30px;
+     padding-right: 30px;
+     width: 160px;
+     left: 0px;
+     z-index: 2000;
+     border:solid 1px rgb(175, 64, 64);
+ }
+ 
+ .calendar .dropdown .dropdown-item
+ {
+     cursor:pointer;
+     opacity: .7;
+     transition: .5s opacity;
+     font-size:10pt;
+     padding:5px;
+ }
+ 
+ .calendar .dropdown .dropdown-item:hover
+ {
+     opacity: 1;
+ }
+ 
+ .calendar .years
+ {
+     display:none;
+ }
+ 
+ .calendar .title
+ {
+     text-align:center;
+     font-size:20pt;
+ }
+ 
+ .calendar .calendar-btn
+ {
+     float: left;
+     text-align: center;
+     font-size: 14pt;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     position: relative;
+     width: 20%;
+     cursor: pointer;
+     transition: .5s background-color;
+ }
+ 
+ .calendar .calendar-btn:hover{
+     background-color:rgb(23, 133, 114);
+ }
+ 
+ .calendar .year-btn
+ {
+     float:right;
+ }
+ 
+ .calendar .calendar-dates .days .day
+ {
+     float:left;
+     width: 10%;
+     margin: 1%;
+     padding: 1%;
+     font-size:13pt;
+     text-align:center;
+     border: solid 1px rgb(153, 105, 105);
+     background-color: #1caff6;
+ }
+ 
+ .calendar .calendar-dates .days .day.blank
+ {
+     background-color: rgb(236, 127, 127);
+     border:none;
+ }
+ 
+ .calendar .calendar-dates .days .day.selected
+ {
+     background-color: #111;
+     color: rgb(236, 127, 127);
+     cursor:pointer;
+     opacity: .5;
+     transition: .5s opacity;
+ }
+ 
+ .calendar .calendar-dates .days .day.selected:hover
+ {
+     opacity: 1;
+ }
+ 
+ .calendar .calendar-dates .days .day.label
+ {
+     height: 2em;
+     background-color: rgb(16, 163, 131);
+     color: black;
+     border:none;
+ }
+ 
+ @media only screen and (max-width: 960px) {
+     .calendar{
+         width: 100%;
+         margin: 0px;
+         margin: 0px;
+         box-sizing: border-box;
+         position: relative;
+         left: 0px;
+     }
+ }

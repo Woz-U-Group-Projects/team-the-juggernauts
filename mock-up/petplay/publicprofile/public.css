@@ -1,0 +1,75 @@
+header{
+    background-color: rgb(47, 209, 230);
+}
+
+body{
+    background-color: rgb(112, 255, 243);
+    font-size: 1.5em;
+    font-family: cursive
+}
+
+p{
+    font-size: 1em;
+    background-color: orange;
+}
+#me{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+
+.push {
+    height: 25em;
+    background-color: greenyellow;
+  }
+
+
+
+#one{
+    opacity: .5;
+    height: 10em;
+    width: auto;
+}
+
+#name{
+    background-color:  rgb(243, 247, 36);
+}
+
+#breed{
+    background-color: rgb(194, 248, 85);
+}
+
+#town{
+    background-color:rgb(245, 218, 67);
+}
+
+#size{
+    background-color:rgb(134, 245, 8);
+}
+
+#likes{
+    background-color:rgb(227, 246, 49);
+}
+
+#dislikes{
+    background-color:rgb(109, 226, 109);
+}
+
+#toy{
+    background-color:rgb(252, 252, 14);
+}
+
+#place{
+    background-color:rgb(29, 226, 29);
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+ }
