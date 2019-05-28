@@ -1,21 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './screens/Home';
-import About from './screens/About';
-import Topics from './screens/Topics';
+import Me from './screens/Me';
+import Photos from './screens/Photos';
+import Public from './screens/Public';
+import Friends from './screens/Friends';
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 const Index = ({ pathname }) => {
     switch (pathname) {
-      case '/about':
-        return <About />;
-      case '/topics':
-        return <Topics />;
+      case '/me':
+        return <Me />;
+      case '/Photos':
+        return <Photos />;
+      case '/Public':
+        return <Public />;
+        case 'Friends':
+          return <Friends />;  
       default:
         return <Home />;
     }
