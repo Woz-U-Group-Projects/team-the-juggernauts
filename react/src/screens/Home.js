@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 
 const Home = () => <MyForm />;
 
@@ -20,7 +20,7 @@ class MyForm extends React.Component {
       );
     }
   }
- render(<MyForm />, document.getElementById('root'));
+ReactDOM.render(<MyForm />, document.getElementById('root'));
 
  
 
