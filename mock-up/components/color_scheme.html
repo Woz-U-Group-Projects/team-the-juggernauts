@@ -65,7 +65,7 @@ Kalam is current favorite.
             color: black;
         }
 
-        div.swatch {
+        .swatch {
             padding: 1em;
         }
 
@@ -73,18 +73,45 @@ Kalam is current favorite.
             background-color: #f79c7e;
         }
 
+        .sandy_beach_peach_border {
+            border-style: dashed;
+            border-color: #f79c7e;
+            border-width: 0.25em;
+        }
+
         .sandy_beach_sunshine {
             background-color: #f7d97e;
+        }
+
+        .sandy_beach_sunshine_border {
+            border-style: dashed;
+            border-color: #f7d97e;
+            border-width: 0.25em;
         }
 
         .sandy_beach_limeaid {
             background-color: #d9f77e;
         }
 
+        .sandy_beach_limeaid_border {
+            border-style: dashed;
+            border-color: #d9f77e;
+            border-width: 0.25em;
+        }
+
         .frosted {
             background-color: rgba(255, 255, 255, 0.75);
-            border-radius: 2em;
+            border-radius: 0.5em;
             padding: 1em;
+            margin: 1em;
+        }
+
+        .shaded {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 0.5em;
+            padding: 1em;
+            margin: 1em;
         }
     </style>
 </head>
@@ -93,11 +120,41 @@ Kalam is current favorite.
 
     <div class="container">
         <div class="row">
-            <div class="swatch col-sm-3 sandy_beach_peach">Sandy Beach Peach #f79c7e</div>
-            <div class="swatch col-sm-3 sandy_beach_sunshine">Sandy Beach Sunshine #f7d97e</div>
-            <div class="swatch col-sm-3 sandy_beach_limeaid">Sandy Beach Limeaid #d9f77e</div>
-            <div class="swatch col-sm-3 sandy_beach_peach">
-                <div class="frosted">Sandy Beach Peach + Frosted #F79C7E</div>
+            <div class="col-sm sandy_beach_peach swatch">Sandy Beach Peach #f79c7e</div>
+            <div class="col-sm sandy_beach_sunshine swatch">Sandy Beach Sunshine #f7d97e</div>
+            <div class="col-sm sandy_beach_limeaid swatch">Sandy Beach Limeaid #d9f77e</div>
+        </div>
+        <div class="row">
+            <div class="col-sm sandy_beach_peach swatch">
+                <div class="frosted">Sandy Beach Peach Frosted #f79c7e</div>
+            </div>
+            <div class="col-sm sandy_beach_sunshine swatch">
+                <div class="frosted">Sandy Beach Sunshine Frosted #f7d97e</div>
+            </div>
+            <div class="col-sm sandy_beach_limeaid swatch">
+                <div class="frosted">Sandy Beach Limeaid Frosted #d9f77e</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm sandy_beach_peach swatch">
+                <div class="shaded">Sandy Beach Peach Frosted #f79c7e</div>
+            </div>
+            <div class="col-sm sandy_beach_sunshine swatch">
+                <div class="shaded">Sandy Beach Sunshine Frosted #f7d97e</div>
+            </div>
+            <div class="col-sm sandy_beach_limeaid swatch">
+                <div class="shaded">Sandy Beach Limeaid Frosted #d9f77e</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm sandy_beach_peach swatch">
+                <div class="frosted sandy_beach_limeaid_border">Sandy Beach Peach Frosted #f79c7e with Limeaid Border</div>
+            </div>
+            <div class="col-sm sandy_beach_sunshine swatch">
+                <div class="frosted sandy_beach_peach_border">Sandy Beach Sunshine Frosted #f7d97e with Peach Border</div>
+            </div>
+            <div class="col-sm sandy_beach_limeaid swatch">
+                <div class="frosted sandy_beach_sunshine_border">Sandy Beach Limeaid Frosted #d9f77e With Sunshine Border</div>
             </div>
         </div>
     </div>
