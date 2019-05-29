@@ -17,11 +17,11 @@ const Index = ({ pathname }) => {
     switch (pathname) {
       case '/me':
         return <Me />;
-      case '/Photos':
+      case '/photos':
         return <Photos />;
-      case '/Public':
+      case '/public':
         return <Public />;
-        case 'Friends':
+        case '/friends':
           return <Friends />;  
       default:
         return <Home />;

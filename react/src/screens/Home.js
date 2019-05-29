@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 const Home = () => <MyForm />;
 
@@ -11,7 +11,7 @@ class MyForm extends React.Component {
         <Header title="Welcome!" />
         <form>
           <h1>Hello</h1>
-          <p>Enter your name:</p>
+          <p>Sign-Up:</p>
           <input
             type="text"
           />
@@ -20,6 +20,6 @@ class MyForm extends React.Component {
       );
     }
   }
-  ReactDOM.render(<MyForm />, document.getElementById('root'));
+ render(<MyForm />, document.getElementById('root'));
 
 export default Home;
