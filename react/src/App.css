@@ -38,8 +38,7 @@ body{
   width: auto;
 }
 div{
-  background-color: rgba(247, 142, 130, 0.884)
-
+ 
 }
 
 
@@ -147,6 +146,7 @@ a:active {
   font-weight: 900;
   background-color: #FF99C9;
   color: #41EAD4;
+  border: 1rem outset;
 }
 
 
@@ -159,6 +159,8 @@ a:active {
   background-color: #aef100;
   color: rgb(18, 188, 255);
   width: 50%;
+  border: 1rem outset;
+
 }
 
 input{
@@ -171,12 +173,15 @@ input{
 
 
 container{
-  align-content: center;
+  margin: auto;
+  width: 50%;
+  border: 1rem outset;
+  margin: auto;
+  padding: 10px;
   font-family: cursive;
   font-size: 8em;
   font-weight: 900;
   background-color: rgb(16, 238, 109);;
   color: rgb(138, 38, 168);
-
-  border: 1rem outset
+ 
   }
