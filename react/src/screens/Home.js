@@ -8,18 +8,17 @@ const Home = () => <MyForm />;
 class MyForm extends React.Component {
   render() {
     return (
+
+      <body>
       <div>
-      <Header title="Welcome to" />
+      <Header title="Welcome to"></Header>
 
 
-      <div id="banner">
-  <div id="cloud-scroll">
+     
   <form>
         <container id= " welcome">Pet Play</container>
+<img id="tugawar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsdvsfKB43bNPiPEpnHEGEO0RV18mt51VU1ZNk-A21TStPjVF0g"></img>
 
-<p id="pone">A wonderful place of fun and play for your pets</p>
-
-<p id ="ptwo">A Great way to explore your community find friends and neighbors with similiar intrests and likes</p>
 
 
         <p id="signup">Sign-Up:</p>
@@ -30,14 +29,36 @@ class MyForm extends React.Component {
 
 
       <div id= "pic"> 
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pmwTBzF6u54Uua0b1ZHc2lOjLpTRM7JUrYizrsTX7csvm4Mwew"></img>
-      
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRKLa8Pn1PgHlww1gZq-5p-5tL1455-KFiHVRE7Ka0ZIp-kOe1w"></img>
-      
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFzY2w3EFkUDJkmZQXO6tuNnSr-nmsV4W5nSUZGxTm7GsT66H"></img>
-      
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2aeoPDxz8egsbLh9kYADsGe8dq79B_zFvO1P38nNUiY6a1KAUg"></img>
-      
+
+
+      <div id="banner">
+  <div id="cloud-scroll">
+
+
+
+
+      <p id="pone">A wonderful place of fun and play for your pets</p>
+
+      <div id="imgone" alt="imgone">
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pmwTBzF6u54Uua0b1ZHc2lOjLpTRM7JUrYizrsTX7csvm4Mwew" class="responsive"></img>
+      </div>
+
+      <div id="imgtwo">
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRKLa8Pn1PgHlww1gZq-5p-5tL1455-KFiHVRE7Ka0ZIp-kOe1w" class="responsive"></img>
+      </div>
+
+
+      <p id ="ptwo">A Great way to explore your community find friends and neighbors with similiar intrests and likes</p>
+
+
+
+      <div id="imgthree">
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFzY2w3EFkUDJkmZQXO6tuNnSr-nmsV4W5nSUZGxTm7GsT66H" class="responsive"></img>
+      </div>
+
+      <div id="imgfour">
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2aeoPDxz8egsbLh9kYADsGe8dq79B_zFvO1P38nNUiY6a1KAUg" class="responsive"></img>
+      </div>
       
       
       
@@ -51,6 +72,8 @@ class MyForm extends React.Component {
 
     
       </div>
+
+      </body>
     );
   }
 }
