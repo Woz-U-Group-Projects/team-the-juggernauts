@@ -10,13 +10,23 @@ class MyForm extends React.Component {
     return (
       <div>
       <Header title="Welcome!" />
-      <form>
+
+
+      <div id="banner">
+  <div id="cloud-scroll">
+  <form>
         <h1>Hello</h1>
         <p>Sign-Up:</p>
         <input
           type="text"
         />
       </form>
+  </div>
+</div>
+
+
+
+    
       </div>
     );
   }
