@@ -9,18 +9,41 @@ class MyForm extends React.Component {
   render() {
     return (
       <div>
-      <Header title="Welcome!" />
+      <Header title="Welcome to" />
 
 
       <div id="banner">
   <div id="cloud-scroll">
   <form>
-        <h1>Hello</h1>
-        <p>Sign-Up:</p>
+        <container id= " welcome">Pet Play</container>
+
+<p id="pone">A wonderful place of fun and play for your pets</p>
+
+<p id ="ptwo">A Great way to explore your community find friends and neighbors with similiar intrests and likes</p>
+
+
+        <p id="signup">Sign-Up:</p>
         <input
           type="text"
         />
       </form>
+
+
+      <div id= "pic"> 
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pmwTBzF6u54Uua0b1ZHc2lOjLpTRM7JUrYizrsTX7csvm4Mwew"></img>
+      
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRKLa8Pn1PgHlww1gZq-5p-5tL1455-KFiHVRE7Ka0ZIp-kOe1w"></img>
+      
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFzY2w3EFkUDJkmZQXO6tuNnSr-nmsV4W5nSUZGxTm7GsT66H"></img>
+      
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2aeoPDxz8egsbLh9kYADsGe8dq79B_zFvO1P38nNUiY6a1KAUg"></img>
+      
+      
+      
+      
+      
+      
+      </div>
   </div>
 </div>
 

@@ -134,3 +134,49 @@ a:active {
     background-position: -99999999px 0;
   }
 }
+
+#pic{
+  background-color: #d6fa81
+}
+
+
+#pone{
+  align-content: center;
+  font-family: cursive;
+  font-size: 3em;
+  font-weight: 900;
+  background-color: #FF99C9;
+  color: #41EAD4;
+}
+
+
+
+#ptwo{
+  align-content: center;
+  font-family: cursive;
+  font-size: 3em;
+  font-weight: 900;
+  background-color: #aef100;
+  color: rgb(18, 188, 255);
+  width: 50%;
+}
+
+input{
+  border: 1rem outset red;
+  color:purple;
+
+  width: 10%;
+}
+
+
+
+container{
+  align-content: center;
+  font-family: cursive;
+  font-size: 8em;
+  font-weight: 900;
+  background-color: rgb(16, 238, 109);;
+  color: rgb(138, 38, 168);
+
+  border: 1rem outset
+  }
