@@ -17,7 +17,7 @@ class MyForm extends React.Component {
      
   <form>
         <container id= " welcome">Pet Play</container>
-<img id="tugawar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsdvsfKB43bNPiPEpnHEGEO0RV18mt51VU1ZNk-A21TStPjVF0g"></img>
+<img id="tugawar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsdvsfKB43bNPiPEpnHEGEO0RV18mt51VU1ZNk-A21TStPjVF0g" alt="tuawar"></img>
 
 
 
@@ -40,11 +40,11 @@ class MyForm extends React.Component {
       <p id="pone">A wonderful place of fun and play for your pets</p>
 
       <div id="imgone" alt="imgone">
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pmwTBzF6u54Uua0b1ZHc2lOjLpTRM7JUrYizrsTX7csvm4Mwew" class="responsive"></img>
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pmwTBzF6u54Uua0b1ZHc2lOjLpTRM7JUrYizrsTX7csvm4Mwew" class="responsive" alt="cute"></img>
       </div>
 
       <div id="imgtwo">
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRKLa8Pn1PgHlww1gZq-5p-5tL1455-KFiHVRE7Ka0ZIp-kOe1w" class="responsive"></img>
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRKLa8Pn1PgHlww1gZq-5p-5tL1455-KFiHVRE7Ka0ZIp-kOe1w" class="responsive" alt="beach"></img>
       </div>
 
 
@@ -53,11 +53,11 @@ class MyForm extends React.Component {
 
 
       <div id="imgthree">
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFzY2w3EFkUDJkmZQXO6tuNnSr-nmsV4W5nSUZGxTm7GsT66H" class="responsive"></img>
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFzY2w3EFkUDJkmZQXO6tuNnSr-nmsV4W5nSUZGxTm7GsT66H" class="responsive"alt="friends" ></img>
       </div>
 
       <div id="imgfour">
-      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2aeoPDxz8egsbLh9kYADsGe8dq79B_zFvO1P38nNUiY6a1KAUg" class="responsive"></img>
+      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2aeoPDxz8egsbLh9kYADsGe8dq79B_zFvO1P38nNUiY6a1KAUg" class="responsive"alt="heeey" ></img>
       </div>
       
       
