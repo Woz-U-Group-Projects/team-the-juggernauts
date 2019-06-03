@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import ReactDOM from 'react-dom';
 // import { stringify } from 'querystring';
-// import axios from "axios";
+import axios from "axios";
 
 
 
@@ -22,12 +22,24 @@ class SignUpForm extends React.Component {
 
     }
   }
-  handleSubmit = (event) => {
-    event.preventDefault()
+  getUser() {
+    axios.get("http://localhost:3001/users").then(res => {
+      const user = res.data;
+      this.setState({ user });
+    });
   }
 
-  handleInputChange = () =>{
-    
+  componentDidMount() {
+    this.getUser();
+  }
+
+  submitUser() {
+    axios
+      .post("http://localhost:5000/fruit", { name: this.state.newUser })
+      .then(res => {
+        this.setState({ newUser: "" });
+        this.getUser();
+      });
   }
   // 
 
