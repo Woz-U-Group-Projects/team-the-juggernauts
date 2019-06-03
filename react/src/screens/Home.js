@@ -1,54 +1,53 @@
 import React from 'react';
 import Header from '../components/Header';
 import ReactDOM from 'react-dom';
-import axios from "axios";
+// import { stringify } from 'querystring';
+// import axios from "axios";
+
+
 
 const Home = () => <SignUpForm />;
 
 class SignUpForm extends React.Component {
-  state = {
-    user: [],
-    newUser: ""
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      fullName: null,
+      lastName: null,
+      petsName: null,
+      petsBreed:null,
+      petsToy:null,
+      petsTown: null,
+      petsPlace:null
 
-  getUser() {
-    axios.get("http://localhost:3001/users").then(res => {
-      const user = res.data;
-      this.setState({ user });
-    });
+    }
+  }
+  handleSubmit = (event) => {
+    event.preventDefault()
   }
 
-  componentDidMount() {
-    this.getUser();
+  handleInputChange = () =>{
+    
   }
-
-  submitUser() {
-    axios
-      .post("http://localhost:3001/users", { name: this.state.newUser })
-      .then(res => {
-        this.setState({ newUser: "" });
-        this.getUser();
-      });
-  }
+  // 
 
   render() {
     return (
       <div>
         <Header title="Welcome!" />
-        <h1>Signup:</h1>
-        <ul>
-          {this.state.user.map(f => (
-            <li key={f.id}>{f.name}
-            </li>
-          ))}
-        </ul>
-
-        <input
-          value={this.state.newUser}
-          onChange={evt => this.setState({ newUser: evt.target.value })}
-        />
-        <button onClick={() => this.submitUser()}>Submit</button>
+        <form>
+          <p><input type='text' placeholder='First Name' name='firstName' /></p>
+          <p><input type='text' placeholder='Last Name' name='lastName' /></p>
+          <p><input type='text' placeholder='Pets Name' name='petsName' /></p>
+          <p><input type='text' placeholder='Pets Favorite Toy' name='petsToy' /></p>
+          <p><input type='text' placeholder='Pets Breed' name='petsBreed' /></p>
+          <p><input type='text' placeholder='Pets Town' name='petsTown' /></p>
+          <p><input type='text' placeholder='Pets Favorite Place' name='petsPlace' /></p>
+          <p><button>Submit</button></p>
+         
+        </form>
       </div>
+
     );
   }
 }
@@ -77,4 +76,30 @@ export default Home;
 // ReactDOM.render(<MyForm />, document.getElementById('root'));
 
 
-//comment// 
+/* <h1>Signup:</h1>
+        <ul>
+          {this.state.user.map(f => (
+            <li key={f.id}>{f.name}
+            </li>
+          ))}
+        </ul> */
+
+        
+          //   axios.get("http://localhost:3001/users").then(res => {
+          //     const user = res.data;
+          //     this.setState({ user });
+          //   });
+          // }
+        
+          // componentDidMount() {
+          //   this.getUser();
+          // }
+        
+          // submitUser() {
+          //   axios
+          //     .post("http://localhost:3001/users", { name: this.state.newUser })
+          //     .then(res => {
+          //       this.setState({ newUser: "" });
+          //       this.getUser();
+          //     });
+          // }
