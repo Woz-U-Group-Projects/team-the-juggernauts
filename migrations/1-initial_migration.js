@@ -24,7 +24,8 @@ var migrationCommands = [{
             " users_id": {
                 " type": Sequelize.INTEGER(5).UNSIGNED,
                 "allowNull": false,
-                "primaryKey": true
+                "primaryKey": true,
+                "autoIncrment": true
             },
             "owner_first_name": {
                 "type": Sequelize.STRING(45),

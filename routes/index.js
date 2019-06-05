@@ -3,31 +3,31 @@ var router = express.Router();
 var users = require('../models/users')
 var mysql = require('mysql2');
 
-var connection = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'root',
-  password: 'Password1!',
-  database: 'furrbabies'
-});
+//var connection = mysql.createConnection({
+//   host: '127.0.0.1',
+//   user: 'root',
+//   password: 'Password1!',
+//   database: 'furrbabies'
+// });
 
-connection.connect(function(err) {
-  if (err) {
-    console.error(err.message);
-    return;
-  }
-  console.log('Yay! You are connected to the database!');
-})
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error(err.message);
+//     return;
+//   }
+//   console.log('Yay! You are connected to the database!');
+// })
 
-/* GET home page. */
-router.get('/person/:id', function(req, res, next) {
-  //get object that matches the id
-  let person = users.people.find(peep => {
-    return peep.id === parseInt(req.params.id);
-  });
-  // render the template with that object
-  res.render('index', { person });
-  console.log(req.url);
-});
+// /* GET home page. */
+// router.get('/person/:id', function(req, res, next) {
+//   //get object that matches the id
+//   let person = users.people.find(peep => {
+//     return peep.id === parseInt(req.params.id);
+//   });
+//   // render the template with that object
+//   res.render('index', { person });
+//   console.log(req.url);
+ //});
 
 
 

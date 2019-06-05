@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 // import { stringify } from 'querystring';
 import axios from "axios";
 
@@ -12,7 +12,7 @@ class SignUpForm extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      fullName: null,
+      firstName: null,
       lastName: null,
       petsName: null,
       petsBreed:null,
@@ -21,6 +21,8 @@ class SignUpForm extends React.Component {
       petsPlace:null
 
     }
+    this.firstName = React.createRef();
+    this.lastName = React.createRef();
   }
   getUser() {
     axios.get("http://localhost:3001/users").then(res => {
@@ -30,40 +32,44 @@ class SignUpForm extends React.Component {
   }
 
   componentDidMount() {
-    this.getUser();
+    //this.getUser();
   }
 
   submitUser() {
     axios
-      .post("http://localhost:5000/fruit", { name: this.state.newUser })
+      .post("http://localhost:3001/users", { 
+        name: this.firstName.current.value, 
+        lname: this.lastName.current.value
+      })
       .then(res => {
         this.setState({ newUser: "" });
         this.getUser();
       });
   }
-  // 
+  //
 
   render() {
     return (
       <div>
         <Header title="Welcome!" />
-        <form>
-          <p><input type='text' placeholder='First Name' name='firstName' /></p>
-          <p><input type='text' placeholder='Last Name' name='lastName' /></p>
+        <h1>Please Sign Up!</h1>
+
+          <p><input type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
+          <p><input type='text' placeholder='Last Name' lname='lastName' ref = {this.lastName}/></p>
           <p><input type='text' placeholder='Pets Name' name='petsName' /></p>
           <p><input type='text' placeholder='Pets Favorite Toy' name='petsToy' /></p>
           <p><input type='text' placeholder='Pets Breed' name='petsBreed' /></p>
           <p><input type='text' placeholder='Pets Town' name='petsTown' /></p>
           <p><input type='text' placeholder='Pets Favorite Place' name='petsPlace' /></p>
-          <p><button>Submit</button></p>
+          <p><button onClick={()=>this.submitUser()}>Submit</button></p>
          
-        </form>
+
       </div>
 
     );
   }
 }
-ReactDOM.render(<SignUpForm />, document.getElementById('root'));
+//ReactDOM.render(<SignUpForm />, document.getElementById('root'));
 
 
 export default Home;
