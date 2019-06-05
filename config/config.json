@@ -1,5 +1,9 @@
 {
   "development": {
+    "username": "root",
+    "password": "Password1!",
+    "database": "furrbabies",
+    "host": "127.0.0.1",
     "dialect": "sqlite",
     "storage": "./database.sqlite3",
     "define": {
@@ -7,10 +11,18 @@
     }
   },
   "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "sqlite",
     "storage": ":memory"
   },
   "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "sqlite",
     "storage": "./database.sqlite3"
   }
