@@ -1,10 +1,7 @@
 {
   "development": {
-    "database" : "furrbabies",
-    "username" : "root",
-    "password" : "Password1!",
-    "host" : "localhost",
-    "dialect": "mysql",
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3",
     "define": {
       "timestamps": false
     }
@@ -14,10 +11,7 @@
     "storage": ":memory"
   },
   "production": {
-    "database" : "furrbabies",
-    "username" : "root",
-    "password" : "Password1!",
-    "host" : "localhost",
-    "dialect": "mysql"
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3"
   }
 }
