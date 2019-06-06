@@ -43,6 +43,14 @@ class App extends Component {
     }
   }
 
+  deleteFruit(id) {
+    axios.delete("http://localhost:5000/fruit/" + id +"")
+      .then(res => {
+        console.log(res.body);
+        this.getFruit();
+      });
+  }
+
   render() {
     return (
       <div>
@@ -57,7 +65,7 @@ class App extends Component {
         <h1>Fruits:</h1>
         <ul>
           {this.state.fruit.map(f => (
-            <li key={f.id}>{f.name} <button>X</button></li>
+            <li key={f.id}>{f.name} <button onClick={() => this.deleteFruit(f.id)}>X</button></li>
           ))}
         </ul>
 
