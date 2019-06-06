@@ -1,1 +1,0 @@
-This folder contains the mocked up HTML, CSS, and some JavaScript for use in creating reusable React components that can be called on via JSX.
