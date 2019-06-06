@@ -3,6 +3,9 @@ var router = express.Router();
 const sqlite = require("sqlite3").verbose();
 var models = require("../models");
 
+//Create an alias for models.Sequelize.Op object (The operators for Sequelize Queries)
+const Op = models.Sequelize.Op;
+
 /* GET home page. */
 router.get("/", function(req, res, next) {
   models.Fruit.findAll().then(fruits => res.json(fruits));
