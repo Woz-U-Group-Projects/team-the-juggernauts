@@ -3,7 +3,7 @@ var router = express.Router();
 const sqlite = require("sqlite3").verbose();
 var models = require("../models");
 
-//Create an alias for models.Sequelize.Op object (The operators for Sequelize Queries)
+//Create an alias for models.Sequelize.Op object(The operators for Sequelize Queries)
 const Op = models.Sequelize.Op;
 
 /* GET home page. */
@@ -11,11 +11,20 @@ router.get("/", function(req, res, next) {
   models.Fruit.findAll().then(fruits => res.json(fruits));
 });
 
-router.get("/:id", function(req, res, next){
+router.get("/search/:name", function(req, res, next) {
+  let searchName = req.params.name;
+  models.Fruit.findAll({
+    where: {
+      name: {[Op.like]: ['%' + searchName + '%']}
+    }
+  }).then(fruits => res.json(fruits));
+});
+
+router.get("/id/:id", function(req, res, next){
   let fruitId = parseInt(req.params.id);
   models.Fruit.findOne({
     where: {
-      id: fruitId
+      Id: fruitId
     }
   })
   .then( fruits => {
