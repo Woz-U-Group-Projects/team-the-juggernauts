@@ -44,10 +44,22 @@ class App extends Component {
   }
 
   deleteFruit(id) {
-    axios.delete("http://localhost:5000/fruit/" + id +"")
+    axios.delete("http://localhost:5000/fruit/" + id + "")
       .then(res => {
         console.log(res.body);
         this.getFruit();
+      });
+  }
+
+  editFruit(id, name) {
+    let result = prompt('Edit Fruit Name', name);
+    if (result !=null ) name = result;
+    axios
+      .post("http://localhost:5000/fruit/edit",
+        { "id": id, "name": name })
+      .then(res => { 
+        console.log(res);
+        this.getFruit(); //Refresh
       });
   }
 
@@ -65,7 +77,11 @@ class App extends Component {
         <h1>Fruits:</h1>
         <ul>
           {this.state.fruit.map(f => (
-            <li key={f.id}>{f.name} <button onClick={() => this.deleteFruit(f.id)}>X</button></li>
+            <li key={f.id}>
+              <button onClick={() => this.deleteFruit(f.id)}>X</button>
+              <button onClick={() => this.editFruit(f.id, f.name)}>Edit</button>
+              <nbsp /> {f.name}
+            </li>
           ))}
         </ul>
 

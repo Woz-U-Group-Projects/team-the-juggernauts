@@ -53,4 +53,18 @@ router.post("/", function (req, res, next) {
   newFruit.save().then(fruit => res.json(fruit));
 });
 
+router.post("/edit/", function (req, res, next) {
+
+  let newName = "" + req.body.name + "";
+  let fruitId = parseInt(req.body.id);
+
+  models.Fruit.update({
+    name: newName
+  },{
+    where: {
+      id: fruitId
+    }
+  }).then(response => res.json(response));
+});
+
 module.exports = router;
