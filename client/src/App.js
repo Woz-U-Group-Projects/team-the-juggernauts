@@ -25,29 +25,34 @@ class App extends Component {
       .post("http://localhost:5000/fruit", { name: this.state.newFruit })
       .then(res => {
         this.setState({ newFruit: "" }); //Reset new fruit field to blank.
-        this.getFruit(); 
+        this.getFruit();
       });
   }
 
-  searchFruit() {
-    axios.get("http://localhost:5000/fruit/search/" + this.state.searchFruit + "")
-      .then(res => {
-        const fruit = res.data;
-        this.setState( { fruit });
-      });
+  searchFruit(searchTerm) {
+    if (searchTerm === "") {
+      this.setState({ searchFruit: "" }); //Clearing search fruit eliminates odd behavior when clearing search field.
+      this.getFruit();
+    } else {
+      this.setState({ searchFruit: searchTerm }); //This is necessary or text input will hold only one character.
+      axios.get("http://localhost:5000/fruit/search/" + searchTerm)
+        .then(res => {
+          const fruit = res.data;
+          this.setState({ fruit });
+        });
+    }
   }
 
   render() {
     return (
       <div>
 
-<h3>Search</h3>
+        <h3>Search</h3>
         <input
           value={this.state.searchFruit}
-          onChange={evt => this.setState({ searchFruit: evt.target.value })}
+          onChange={evt => this.searchFruit(evt.target.value)}
         />
-        <button onClick={() => this.searchFruit()}>Search</button>
-        <button onClick={() => this.getFruit()}>Clear</button>
+        <button onClick={() => this.searchFruit("")}>Reset</button>
 
         <h1>Fruits:</h1>
         <ul>
