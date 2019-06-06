@@ -57,7 +57,7 @@ class App extends Component {
         <h1>Fruits:</h1>
         <ul>
           {this.state.fruit.map(f => (
-            <li key={f.id}>{f.name}</li>
+            <li key={f.id}>{f.name} <button>X</button></li>
           ))}
         </ul>
 
