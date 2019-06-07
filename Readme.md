@@ -23,6 +23,9 @@ npm install -g concurrently
 ```
 npm install
 npm run client-install
+cd client
+npm audit fix
+cd ..
 npm run dev
 ```
 
