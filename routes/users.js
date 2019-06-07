@@ -11,15 +11,15 @@ router.get('/', function(req, res, next) {
 router.post("/", function(req, res, next) {
   console.log(req.body);
   let newUser = new models.users();
-  // newUser.users_id=0;
+  newUser.users_id=0;
   newUser.owner_first_name = req.body.name;
-  newUser.owner_last_name = "";
-  newUser.pets_name="";
-  newUser.fav_toy="";
-  newUser.breed = "";
-  newUser.hometown = "";
-  newUser.fav_place = "";
-  newUser.save().then(User => res.json(user)).catch(err=> console.log(err));
+  newUser.owner_last_name = req.body.lname;
+  newUser.pets_name= req.body.pname;
+  newUser.fav_toy= req.body.tname;
+  newUser.breed = req.body.bname;
+  newUser.hometown = req.body.twname;
+  newUser.fav_place = req.body.ppname;
+  newUser.save().then(user => res.json(user)).catch(err=> console.log(err));
   //models.users.create(req.body).then(user => res.json(user)).catch(error => console.log(error));
 });
 

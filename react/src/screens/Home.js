@@ -23,6 +23,11 @@ class SignUpForm extends React.Component {
     }
     this.firstName = React.createRef();
     this.lastName = React.createRef();
+    this.petsName = React.createRef();
+    this.petsToy = React.createRef();
+    this.petsBreed = React.createRef();
+    this.petsTown = React.createRef();
+    this.petsPlace = React.createRef();
   }
   getUser() {
     axios.get("http://localhost:3001/users").then(res => {
@@ -39,7 +44,13 @@ class SignUpForm extends React.Component {
     axios
       .post("http://localhost:3001/users", { 
         name: this.firstName.current.value, 
-        lname: this.lastName.current.value
+        lname: this.lastName.current.value,
+        pname: this.petsName.current.value,
+        tname: this.petsToy.current.value,
+        bname: this.petsBreed.current.value,
+        twname: this.petsTown.current.value,
+        ppname: this.petsPlace.current.value,
+
       })
       .then(res => {
         this.setState({ newUser: "" });
@@ -56,11 +67,11 @@ class SignUpForm extends React.Component {
 
           <p><input type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
           <p><input type='text' placeholder='Last Name' lname='lastName' ref = {this.lastName}/></p>
-          <p><input type='text' placeholder='Pets Name' name='petsName' /></p>
-          <p><input type='text' placeholder='Pets Favorite Toy' name='petsToy' /></p>
-          <p><input type='text' placeholder='Pets Breed' name='petsBreed' /></p>
-          <p><input type='text' placeholder='Pets Town' name='petsTown' /></p>
-          <p><input type='text' placeholder='Pets Favorite Place' name='petsPlace' /></p>
+          <p><input type='text' placeholder='Pets Name' pname='petsName' ref = {this.petsName}/></p>
+          <p><input type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref = {this.petsToy}/></p>
+          <p><input type='text' placeholder='Pets Breed' bname='petsBreed' ref = {this.petsBreed} /></p>
+          <p><input type='text' placeholder='Pets Town' twname='petsTown' ref = {this.petsTown} /></p>
+          <p><input type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref = {this.petsPlace} /></p>
           <p><button onClick={()=>this.submitUser()}>Submit</button></p>
          
 

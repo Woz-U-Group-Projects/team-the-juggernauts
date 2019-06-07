@@ -1,10 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
   return sequelize.define('users', {
     users_id: {
-      type: DataTypes.INTEGER(5).UNSIGNED,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoincrement: true
+      autoIncrement: true
     },
     owner_first_name: {
       type: DataTypes.STRING(45),
