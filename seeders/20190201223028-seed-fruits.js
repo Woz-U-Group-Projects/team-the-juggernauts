@@ -14,9 +14,9 @@ module.exports = {
     */
 
     return queryInterface.bulkInsert("Fruits", [
-      { name: "Banana" },
-      { name: "Strawberry" },
-      { name: "Tomato" }
+      { name: "Banana" , description: "A long curved fruit which grows in clusters and has soft pulpy flesh and yellow skin when ripe."},
+      { name: "Strawberry" , description: "A sweet soft red fruit with a seed-studded surface."},
+      { name: "Tomato" , description: "A glossy red, or occasionally yellow, pulpy edible fruit that is eaten as a vegetable or in salad."}
     ]);
   },
 

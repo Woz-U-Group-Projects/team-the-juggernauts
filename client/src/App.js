@@ -81,6 +81,9 @@ class App extends Component {
               <button onClick={() => this.deleteFruit(f.id)}>X</button>
               <button onClick={() => this.editFruit(f.id, f.name)}>Edit</button>
               <nbsp /> {f.name}
+              <ul>
+                <li>{f.description}</li>
+              </ul>
             </li>
           ))}
         </ul>
