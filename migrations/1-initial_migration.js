@@ -12,7 +12,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "initial_migration",
-    "created": "2019-06-11T00:30:56.740Z",
+    "created": "2019-06-11T22:58:10.421Z",
     "comment": ""
 };
 
@@ -38,22 +38,15 @@ var migrationCommands = [{
                 "field": "owner_last_name",
                 "allowNull": false
             },
-            "Email": {
+            "Email_User_Name": {
                 "type": Sequelize.STRING,
-                "field": "Email",
-                "allowNull": false,
-                "unique": true
-            },
-            "User_name": {
-                "type": Sequelize.STRING,
-                "field": "User_name",
-                "allowNull": false,
+                "field": "Email_User_Name",
                 "unique": true
             },
             "Password": {
                 "type": Sequelize.STRING,
                 "field": "Password",
-                "allowNull": false
+                "unique": true
             },
             "pets_name": {
                 "type": Sequelize.STRING,

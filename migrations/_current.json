@@ -20,20 +20,13 @@
                     "field": "owner_last_name",
                     "seqType": "Sequelize.STRING"
                 },
-                "Email": {
+                "Email_User_Name": {
                     "unique": true,
-                    "allowNull": false,
-                    "field": "Email",
-                    "seqType": "Sequelize.STRING"
-                },
-                "User_name": {
-                    "unique": true,
-                    "allowNull": false,
-                    "field": "User_name",
+                    "field": "Email_User_Name",
                     "seqType": "Sequelize.STRING"
                 },
                 "Password": {
-                    "allowNull": false,
+                    "unique": true,
                     "field": "Password",
                     "seqType": "Sequelize.STRING"
                 },

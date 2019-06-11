@@ -14,19 +14,14 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Email: {
+    Email_User_Name: {
       type:DataTypes.STRING,
       unique:true,
-      allowNull: false
-    },
-    User_name: {
-      type: DataTypes.STRING,
-      unique: true,
-      allowNull: false
+      // allowNull: false
     },
     Password: {
       type:DataTypes.STRING,
-    allowNull: false
+      unique:true
     },
     pets_name: {
       type: DataTypes.STRING,
