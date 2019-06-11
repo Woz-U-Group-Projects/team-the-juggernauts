@@ -13,37 +13,54 @@
                 "owner_first_name": {
                     "allowNull": false,
                     "field": "owner_first_name",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "owner_last_name": {
                     "allowNull": false,
                     "field": "owner_last_name",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
+                },
+                "Email": {
+                    "unique": true,
+                    "allowNull": false,
+                    "field": "Email",
+                    "seqType": "Sequelize.STRING"
+                },
+                "User_name": {
+                    "unique": true,
+                    "allowNull": false,
+                    "field": "User_name",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Password": {
+                    "allowNull": false,
+                    "field": "Password",
+                    "seqType": "Sequelize.STRING"
                 },
                 "pets_name": {
                     "allowNull": false,
                     "field": "pets_name",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "fav_toy": {
                     "allowNull": false,
                     "field": "fav_toy",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "breed": {
                     "allowNull": false,
                     "field": "breed",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "hometown": {
                     "allowNull": false,
                     "field": "hometown",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "fav_place": {
                     "allowNull": false,
                     "field": "fav_place",
-                    "seqType": "Sequelize.STRING(45)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "join_date": {
                     "allowNull": false,

@@ -7,31 +7,45 @@ module.exports = function (sequelize, DataTypes) {
       autoIncrement: true
     },
     owner_first_name: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
     owner_last_name: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
+    Email: {
+      type:DataTypes.STRING,
+      unique:true,
+      allowNull: false
+    },
+    User_name: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false
+    },
+    Password: {
+      type:DataTypes.STRING,
+    allowNull: false
+    },
     pets_name: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
     fav_toy: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
     breed: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
     hometown: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
     fav_place: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING,
       allowNull: false
     },
     join_date: {
@@ -43,4 +57,3 @@ module.exports = function (sequelize, DataTypes) {
     tableName: 'users'
   });
 };
-

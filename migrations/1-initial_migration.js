@@ -12,7 +12,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "initial_migration",
-    "created": "2019-06-07T21:09:05.406Z",
+    "created": "2019-06-11T00:30:56.740Z",
     "comment": ""
 };
 
@@ -29,37 +29,54 @@ var migrationCommands = [{
                 "allowNull": false
             },
             "owner_first_name": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "owner_first_name",
                 "allowNull": false
             },
             "owner_last_name": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "owner_last_name",
                 "allowNull": false
             },
+            "Email": {
+                "type": Sequelize.STRING,
+                "field": "Email",
+                "allowNull": false,
+                "unique": true
+            },
+            "User_name": {
+                "type": Sequelize.STRING,
+                "field": "User_name",
+                "allowNull": false,
+                "unique": true
+            },
+            "Password": {
+                "type": Sequelize.STRING,
+                "field": "Password",
+                "allowNull": false
+            },
             "pets_name": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "pets_name",
                 "allowNull": false
             },
             "fav_toy": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "fav_toy",
                 "allowNull": false
             },
             "breed": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "breed",
                 "allowNull": false
             },
             "hometown": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "hometown",
                 "allowNull": false
             },
             "fav_place": {
-                "type": Sequelize.STRING(45),
+                "type": Sequelize.STRING,
                 "field": "fav_place",
                 "allowNull": false
             },
