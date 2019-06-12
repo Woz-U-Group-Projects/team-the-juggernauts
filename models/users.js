@@ -15,13 +15,13 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     Email_User_Name: {
-      type:DataTypes.STRING,
-      unique:true,
-      // allowNull: false
+      type: DataTypes.STRING,
+      unique: true
+      // allowNull: true
     },
     Password: {
-      type:DataTypes.STRING,
-      unique:true
+      type: DataTypes.STRING,
+      unique: true
     },
     pets_name: {
       type: DataTypes.STRING,
@@ -49,6 +49,6 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
-    tableName: 'users'
-  });
+      tableName: 'users'
+    });
 };
