@@ -1,16 +1,32 @@
 import React from 'react';
 import Header from '../components/Header';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+// import { stringify } from 'querystring';
 import axios from "axios";
+import Login from './Login';
+
+
 
 const Home = () => <SignUpForm />;
 
 class SignUpForm extends React.Component {
-  state = {
-    user: [],
-    newUser: ""
-  };
+  constructor(props) {
+    super(props)
 
+
+
+    this.firstName = React.createRef();
+    this.lastName = React.createRef();
+    this.emailName = React.createRef();
+    // this.userName = React.createRef();
+    this.passName = React.createRef();
+    this.petsName = React.createRef();
+    this.petsToy = React.createRef();
+    this.petsBreed = React.createRef();
+    this.petsTown = React.createRef();
+    this.petsPlace = React.createRef();
+
+  }
   getUser() {
     axios.get("http://localhost:3001/users").then(res => {
       const user = res.data;
@@ -19,113 +35,58 @@ class SignUpForm extends React.Component {
   }
 
   componentDidMount() {
-    this.getUser();
+    //this.getUser();
   }
 
   submitUser() {
     axios
-      .post("http://localhost:3001/users", { name: this.state.newUser })
+      .post("http://localhost:3001/users", {
+        name: this.firstName.current.value,
+        lname: this.lastName.current.value,
+        ename: this.emailName.current.value,
+        // uname: this.userName.current.value,
+        passname: this.passName.current.value,
+        pname: this.petsName.current.value,
+        tname: this.petsToy.current.value,
+        bname: this.petsBreed.current.value,
+        twname: this.petsTown.current.value,
+        ppname: this.petsPlace.current.value,
+
+      })
       .then(res => {
         this.setState({ newUser: "" });
         this.getUser();
       });
   }
+  //
 
   render() {
     return (
+      <div>
+        <Header title="Welcome!" />
+        <h1>Please Sign Up!</h1>
 
-      <body>
-        <div>
-          <Header title="Welcome to"></Header>
+        <p><input type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
+        <p><input type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
+        <p><input type='text' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
+        {/* <p><input type='text' placeholder='User Name' uname='userName' ref = {this.userName}/></p> */}
+        <p><input type='text' placeholder='Password' passname='passName' ref={this.passName} /></p>
+        <p><input type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
+        <p><input type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
+        <p><input type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
+        <p><input type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
+        <p><input type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
+        <p><button onClick={() => this.submitUser()}>Submit</button></p>
+        <Login />
+      </div>
 
-
-
-          <form>
-            <container id=" welcome">Pet Play</container>
-            <img id="tugawar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsdvsfKB43bNPiPEpnHEGEO0RV18mt51VU1ZNk-A21TStPjVF0g" alt="tuawar"></img>
-
-
-
-            <p id="signup">Sign-Up:</p>
-            <input
-              value={this.state.newUser}
-              onChange={evt => this.setState({ newUser: evt.target.value })}
-            />
-          </form>
-
-
-          <div id="pic">
-
-
-            <div id="banner">
-              <div id="cloud-scroll">
-
-
-
-
-                <p id="pone">A wonderful place of fun and play for your pets</p>
-
-                <div id="imgone" alt="imgone">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pmwTBzF6u54Uua0b1ZHc2lOjLpTRM7JUrYizrsTX7csvm4Mwew" class="responsive" alt="cute"></img>
-                </div>
-
-                <div id="imgtwo">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRKLa8Pn1PgHlww1gZq-5p-5tL1455-KFiHVRE7Ka0ZIp-kOe1w" class="responsive" alt="beach"></img>
-                </div>
-
-
-                <p id="ptwo">A Great way to explore your community find friends and neighbors with similiar intrests and likes</p>
-
-
-
-                <div id="imgthree">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFzY2w3EFkUDJkmZQXO6tuNnSr-nmsV4W5nSUZGxTm7GsT66H" class="responsive" alt="friends" ></img>
-                </div>
-
-                <div id="imgfour">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2aeoPDxz8egsbLh9kYADsGe8dq79B_zFvO1P38nNUiY6a1KAUg" class="responsive" alt="heeey" ></img>
-                </div>
-
-
-
-
-
-              </div>
-            </div>
-          </div>
-
-
-
-
-        </div>
-
-      </body>
     );
   }
 }
-ReactDOM.render(<SignUpForm />, document.getElementById('root'));
+//ReactDOM.render(<SignUpForm />, document.getElementById('root'));
 
 
 export default Home;
 
 
-// class MyForm extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//       <Header title="Welcome!" />
-//       <form>
-//         <h1>Hello</h1>
-//         <p>Sign-Up:</p>
-//         <input
-//           type="text"
-//         />
-//       </form>
-//       </div>
-//     );
-//   }
-// }
-// ReactDOM.render(<MyForm />, document.getElementById('root'));
-
-
-//comment// 
+//
