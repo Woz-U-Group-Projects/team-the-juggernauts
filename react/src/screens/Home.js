@@ -90,9 +90,9 @@ class SignUpForm extends React.Component {
 
         <p><input id="inputid" type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
         <p><input id="inputid" type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
-        <p><input id="inputid" type='text' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
+        <p><input id="inputid" type='email' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
         {/* <p><input type='text' placeholder='User Name' uname='userName' ref = {this.userName}/></p> */}
-        <p><input id="inputid" type='text' placeholder='Password' passname='passName' ref={this.passName} /></p>
+        <p><input id="inputid" type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
         <p><input id="inputid" type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
         <p><input id="inputid" type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
         <p><input  id="inputid"type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
