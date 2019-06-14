@@ -31,3 +31,65 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: #61dafb;
+  background-repeat: no-repeat;
+  height: 15em;
+  width: auto;
+}
+div{
+  background-color: rgba(247, 142, 130, 0.884)
+
+}
+
+
+ /* unvisited link */
+ a:link {
+  color: rgb(187, 255, 0);
+
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+/* visited link */
+a:link, a:visited {
+  background-color: #d6fa81;
+  color: rgb(5, 129, 98);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+border:1em outset purple;
+  border-radius: 12px;
+
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+
+}
+
+/* mouse over link */
+a:hover {
+  color: goldenrod;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  background-color: #4CAF50; /* Green */
+  color: white;
+
+}
+
+/* selected link */
+a:active {
+  color: blue;
+
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+} 
