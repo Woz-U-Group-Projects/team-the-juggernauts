@@ -13,9 +13,19 @@ class Login extends React.Component {
         this.passName = React.createRef();
     }
 
-    componentDidMount() {
-        //this.getUser();
-      }
+    validateForm() {
+        return this.emailName > 0 && this.state.password.length > 0;
+    }
+
+    handleChange = event => {
+        this.setState({
+            [event.target.id]: event.target.value
+        });
+    }
+
+    // componentDidMount() {
+    //     //this.getUser();
+    //   }
 
     submitLogin() {
         axios
@@ -34,12 +44,15 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Login</h1>
-                <p><input type="text" placeholder='Email / User Name' ename='emailName' ref={this.emailName} ></input></p>
-                <p><input type='text' placeholder='Password' passname='passName' ref={this.passName} /></p>
-                <p><button onClick={() => this.submitLogin()}>Login</button></p>
+            <div className="Login">
+                <form onSubmit={this.handleChange}>
+                    <h1>Login</h1>
+                    <p><input type="text" placeholder='Email / User Name' ename='emailName' ref={this.emailName} onChange={this.handleChange}></input></p>
+                    <p><input type='text' placeholder='Password' passname='passName' ref={this.passName} onChange={this.handleChange} /></p>
+                    <p><button onClick={() => this.submitLogin()}>Login</button></p>
+                </form>
             </div>
+
         );
     }
 }
