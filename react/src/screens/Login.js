@@ -36,9 +36,9 @@ class Login extends React.Component {
         return (
             <div>
                 <h1>Login</h1>
-                <p><input type="text" placeholder='Email / User Name' ename='emailName' ref={this.emailName} ></input></p>
-                <p><input type='text' placeholder='Password' passname='passName' ref={this.passName} /></p>
-                <p><button onClick={() => this.submitLogin()}>Login</button></p>
+                <p><input id="inputid2" type="text" placeholder='Email / User Name' ename='emailName' ref={this.emailName} ></input></p>
+                <p><input id="inputid2" type='text' placeholder='Password' passname='passName' ref={this.passName} /></p>
+                <p><button id="inputid2" onClick={() => this.submitLogin()}>Login</button></p>
             </div>
         );
     }
