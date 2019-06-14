@@ -62,11 +62,26 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div id="banner">
-      <div id='cloud-scroll'>
+      <div class="container">
+
+
+
+
         <Header title="Welcome!" />
 
-        <div class="container">
+  
+
+        <h1>Welcome to</h1>
+    
+        <div class="col-lg-12">
+            <div class="container-fluid" id="container3">
+                <div class="hero-image">
+
+                </div>
+
+                <div id='banner'>
+<div id="cloud-scroll">
+                <div id ="form1">
   <div class="row">
     <div class="col-lg-6">
 
@@ -85,16 +100,20 @@ class SignUpForm extends React.Component {
         <p><input id="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
         <p><button id="inputid" onClick={() => this.submitUser()}>Submit</button></p>
         </div>
-        
-       
-  <div class="row">
-    <div class="col-lg-6"></div>
-        
-        <Login />
         </div>
-      </div>
+        </div>
         
-</div></div></div>
+
+        <div id='banner'>
+<div id="cloud-scroll">
+
+       <div id="form2">
+  
+    
+        <Login />
+       </div></div>   
+        </div></div></div>  </div>
+</div></div>
     );
   }
 }
