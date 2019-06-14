@@ -8,6 +8,13 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+
+
+// Users form route
+
 router.post("/", function(req, res, next) {
   console.log(req.body);
   let newUser = new models.users();
@@ -24,6 +31,25 @@ router.post("/", function(req, res, next) {
   newUser.fav_place = req.body.ppname;
   newUser.save().then(user => res.json(user)).catch(err=> console.log(err));
   //models.users.create(req.body).then(user => res.json(user)).catch(error => console.log(error));
+});
+
+
+// Login form route
+
+router.post('/login', function(req, res, next) {
+  models.users
+    .findOne({
+      where: {
+        Email_User_Name: req.body.ename,
+        Password: req.body.passname
+      }
+    }).then(user => {
+      if (user) {
+        res.send('Login succeeded');
+      } else {
+        res.send('Invalid login')
+      }
+    })
 });
 
 module.exports = router;

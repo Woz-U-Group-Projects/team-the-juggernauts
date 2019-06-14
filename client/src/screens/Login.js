@@ -29,7 +29,7 @@ class Login extends React.Component {
 
     submitLogin() {
         axios
-            .post("http://localhost:3001/users", {
+            .post("http://localhost:3001/users/login", {
 
                 ename: this.emailName.current.value,
                 passname: this.passName.current.value,
@@ -47,8 +47,8 @@ class Login extends React.Component {
             <div className="Login">
                 <form onSubmit={this.handleChange}>
                     <h1>Login</h1>
-                    <p><input type="text" placeholder='Email / User Name' ename='emailName' ref={this.emailName} onChange={this.handleChange}></input></p>
-                    <p><input type='text' placeholder='Password' passname='passName' ref={this.passName} onChange={this.handleChange} /></p>
+                    <p><input type="email" placeholder='Email / User Name' ename='emailName' ref={this.emailName} onChange={this.handleChange}></input></p>
+                    <p><input type='password' placeholder='Password' passname='passName' ref={this.passName} onChange={this.handleChange} /></p>
                     <p><button onClick={() => this.submitLogin()}>Login</button></p>
                 </form>
             </div>
