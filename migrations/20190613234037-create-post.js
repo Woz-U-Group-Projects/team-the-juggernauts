@@ -9,30 +9,28 @@ module.exports = {
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
-   return queryInterface.createTable("Posts", {
-    post_id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: Sequelize.INTEGER
-    },
-    pet_id: {
-      allowNull: false,
-      type: Sequelize.INTEGER.UNSIGNED
-    },
-    post_body: {
-      allowNull: true,
-      type: Sequelize.STRING
-    },
-    img_url: {
-      allowNull: true,
-      type: Sequelize.STRING
-    },
-    link_url: {
-      allowNull: true,
-      type: Sequelize.STRING
-    }
-  });
-},
+    return queryInterface.createTable("Posts", {
+      post_id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      pet_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      post_body: {
+        type: Sequelize.STRING
+      },
+      img_url: {
+        type: Sequelize.STRING
+      },
+      link_url: {
+        type: Sequelize.STRING
+      }
+    });
+  },
 
   down: (queryInterface, Sequelize) => {
     /*
