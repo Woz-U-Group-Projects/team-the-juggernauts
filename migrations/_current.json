@@ -22,11 +22,12 @@
                 },
                 "Email_User_Name": {
                     "unique": true,
+                    "allowNull": true,
                     "field": "Email_User_Name",
                     "seqType": "Sequelize.STRING"
                 },
                 "Password": {
-                    "unique": true,
+                    "allowNull": false,
                     "field": "Password",
                     "seqType": "Sequelize.STRING"
                 },
