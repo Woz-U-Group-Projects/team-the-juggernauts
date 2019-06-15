@@ -65,6 +65,8 @@ class SignUpForm extends React.Component {
       <div class="container">
 
 
+<div id='banner'>
+<div id="cloud-scroll">
 
 
         <Header title="Welcome!" />
@@ -74,13 +76,19 @@ class SignUpForm extends React.Component {
         <h1>Welcome to</h1>
     
         <div class="col-lg-12">
+
+
+
             <div class="container-fluid" id="container3">
                 <div class="hero-image">
 
                 </div>
-
-                <div id='banner'>
-<div id="cloud-scroll">
+                <div class="hero-text">
+       
+       <p id="paraone">Pet play</p>
+     </div> 
+   
+  
                 <div id ="form1">
   <div class="row">
     <div class="col-lg-6">
