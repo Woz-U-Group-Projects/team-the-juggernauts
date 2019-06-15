@@ -29,7 +29,13 @@ router.post("/", function (req, res, next) {
   //models.users.create(req.body).then(user => res.json(user)).catch(error => console.log(error));
 });
 
-
+// .spread(function(result, created) {
+//   if (created) {
+//     res.redirect('login');  //<---Change this line to redirect to the login screen
+//   } else {
+//     res.send('This user already exists');
+//   }
+// });
 
 
 module.exports = router;
