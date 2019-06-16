@@ -3,18 +3,15 @@
     "dialect": "sqlite",
     "storage": "./database.sqlite3",
     "define": {
-      "timestamps": false
-    },
-    "operatorsAliases": false
+      "timestamps": true
+    }
   },
   "test": {
     "dialect": "sqlite",
-    "storage": ":memory",
-    "operatorsAliases": false
+    "storage": ":memory"
   },
   "production": {
     "dialect": "sqlite",
-    "storage": "./database.sqlite3",
-    "operatorsAliases": false
+    "storage": "./database.sqlite3"
   }
 }
