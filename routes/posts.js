@@ -9,6 +9,6 @@ const Op = models.Sequelize.Op;
 //Get all posts. Returns JSON. Accessible thru http://localhost:5000/posts
 router.get("/", function (req, res, next) {
     models.Post.findAll().then(posts => res.json(posts));
-  });
+});
 
 module.exports = router;
