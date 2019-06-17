@@ -43,7 +43,7 @@ class Login extends React.Component {
                 console.log(res);
                 // this.setState();
                 // this.getLogin();
-                if(res.data!="Invalid login"){
+                if(res.data!=="Invalid login"){
                 this.props.history.push("/me");
                 }
             });

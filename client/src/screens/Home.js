@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 // import ReactDOM from 'react-dom';
 // import { stringify } from 'querystring';
 import axios from "axios";
