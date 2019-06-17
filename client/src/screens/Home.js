@@ -63,7 +63,7 @@ class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        <Header title="Welcome!" />
+        
         <h1>Please Sign Up!</h1>
 
         <p><input type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>

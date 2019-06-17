@@ -3,6 +3,7 @@ import React from 'react';
 // // import ReactDOM from 'react-dom';
 // // import { stringify } from 'querystring';
 import axios from "axios";
+import {withRouter} from 'react-router-dom';
 
 
 class Login extends React.Component {
@@ -27,9 +28,11 @@ class Login extends React.Component {
     //     //this.getUser();
     //   }
 
-    submitLogin() {
+    submitLogin(event) {
+        event.preventDefault();
+
         axios
-            .post("http://localhost:3001/users/login", {
+            .post("http://localhost:3001/login", {
 
                 ename: this.emailName.current.value,
                 passname: this.passName.current.value,
@@ -37,8 +40,12 @@ class Login extends React.Component {
 
             })
             .then(res => {
-                this.setState();
-                this.getLogin();
+                console.log(res);
+                // this.setState();
+                // this.getLogin();
+                if(res.data!="Invalid login"){
+                this.props.history.push("/me");
+                }
             });
     }
 
@@ -49,7 +56,7 @@ class Login extends React.Component {
                     <h1>Login</h1>
                     <p><input type="email" placeholder='Email / User Name' ename='emailName' ref={this.emailName} onChange={this.handleChange}></input></p>
                     <p><input type='password' placeholder='Password' passname='passName' ref={this.passName} onChange={this.handleChange} /></p>
-                    <p><button onClick={() => this.submitLogin()}>Login</button></p>
+                    <p><button onClick={(event) => this.submitLogin(event)}>Login</button></p>
                 </form>
             </div>
 
@@ -58,4 +65,4 @@ class Login extends React.Component {
 }
 
 
-export default Login;
+export default withRouter( Login);

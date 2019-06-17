@@ -2,13 +2,13 @@ var express = require('express');
 var router = express.Router();
 var models = require("../models");
 
-router.get('/login', function (req, res, next) {
+router.get('/', function (req, res, next) {
     res.render('login');
 });
 
 // Login form route
 
-router.post('/login', function (req, res, next) {
+router.post('/', function (req, res, next) {
     models.users
         .findOne({
             where: {
