@@ -4,7 +4,7 @@ import Header from '../components/Header';
 // import { stringify } from 'querystring';
 import axios from "axios";
 import Login from './Login';
-import logo from "./logo"
+
 
 
 const Home = () => <SignUpForm />;
@@ -84,18 +84,15 @@ class SignUpForm extends React.Component {
                 <div className="hero-image">
 
                 </div>
-                <div className="hero-text">
-       
-<logo />
+                <div className="hero-text">A wonderful place of fun and play for your pets
 
-       {/* <img src="../photos/gerbil.png" alt="rainbowplay"/> */}
      </div> </div>
-   
-  
-                <div id ="form1">
+   <p id="pone">
+   </p>
+            <div className="all" >
   <div class="row">
     <div class="col-lg-6">
-
+<div id="form1">
 
         <h1>Please Sign Up!</h1>
 
@@ -111,9 +108,10 @@ class SignUpForm extends React.Component {
         <p><input className="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
         <p><button className="inputid" onClick={() => this.submitUser()}>Submit</button></p>
         </div>
-        </div>
-        </div>
+       
         
+       
+        <p id="ptwo" >A Great way to explore your community find friends and neighbors with similiar intrests and likes </p>
 
         <div class="col-lg-6">
 
@@ -121,10 +119,16 @@ class SignUpForm extends React.Component {
   
     
         <Login />
-       </div></div>   
-        </div>  </div>
 
 
+       
+       </div>  </div> 
+        </div> 
+        </div>    
+        </div>
+        </div>
+        </div>
+       
         </body>
 
     );
