@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 // import ReactDOM from 'react-dom';
 // import { stringify } from 'querystring';
 import axios from "axios";
@@ -62,64 +62,21 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-
-<body>
-<div id='cloud-scroll'></div>
-
-      <div className="container">
-
-
-
-        <Header title="Welcome!" />
-
-  
-
-        <h1>Welcome to</h1>
-    
-        <div className="col-lg-12">
-
-
-
-            <div className="container-fluid" id="container3">
-                <div className="hero-image">
-
-                </div>
-                <div className="hero-text">
-       
-<logo />
-
-       {/* <img src="../photos/gerbil.png" alt="rainbowplay"/> */}
-     </div> </div>
-   
-  
-                <div id ="form1">
-  <div class="row">
-    <div class="col-lg-6">
-
-
+      <div>
+        
         <h1>Please Sign Up!</h1>
 
-        <p><input className="inputid" type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
-        <p><input className="inputid" type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
-        <p><input className="inputid" type='email' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
+        <p><input type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
+        <p><input type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
+        <p><input type='email' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
         {/* <p><input type='text' placeholder='User Name' uname='userName' ref = {this.userName}/></p> */}
-        <p><input className="inputid" type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
-        <p><input  className="inputid"type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
-        <p><button className="inputid" onClick={() => this.submitUser()}>Submit</button></p>
-        </div>
-        </div>
-        </div>
-        
-
-        <div class="col-lg-6">
-
-       <div id="form2">
-  
-    
+        <p><input type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
+        <p><input type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
+        <p><input type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
+        <p><input type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
+        <p><input type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
+        <p><input type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
+        <p><button onClick={() => this.submitUser()}>Submit</button></p>
         <Login />
        </div></div>   
         </div>  </div>
