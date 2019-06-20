@@ -12,10 +12,7 @@
   }
 }
 body{
-  background: rgb(151, 198, 230);  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, rgb(133, 186, 221));  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, rgb(133, 186, 221)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+ background-color: #7cf3f3;
 font-family: 'Righteous', cursive;;
 
   color:rgb(238, 106, 18);
@@ -85,11 +82,11 @@ a:active {
 
 #cloud-scroll {
   background: url("http://9a2e1a2047765d2a004e-e6d2db425d8d4f2619e5cee56a48bcef.r55.cf2.rackcdn.com/clouds.png")  repeat-x;
- opacity: .5;
+ opacity: .6;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-size: cover;
   position: absolute;
   -webkit-animation: 900000s backgroundScroll infinite linear;
@@ -144,14 +141,13 @@ a:active {
 }
 
 
-
 #ptwo{
   align-content: center;
   font-family: cursive;
   font-size:2em;
   font-weight: 900;
-  background-color: #1166ac;
-  color: rgb(218, 255, 11);
+  background-color: #66ff00;
+  color:#a80077 ;
   float: right;
   width: 50%;
   border: 1rem outset;
@@ -209,19 +205,19 @@ float: right;
     max-width: 20em;
   height: 45em;
   margin-right: 0em;
-  max-width: 20em;
-     opacity: .70;
-    filter: alpha(opacity=65); /* For IE8 and earlier */
+  
+     
+    
 
     width: 56em;
-   background-image: url(./photos/bone.bmp);
+   background-image: url(./photos/waggingdogtail.bmp);
     color: rgb(230, 44, 183); 
 
 
 }
 
 .all{
-  background-image: url(./photos/bone.bmp);
+  background-image: url(./photos/waggingdogtail.bmp);
   Height:23em;
 }
 
@@ -232,15 +228,14 @@ float: right;
 
 #form2{
   flex: 100%;
-  
+ 
 
 margin-left: 25em;
-  max-width: 20em;
-  height: 25em;
-     opacity: .70;
-    filter: alpha(opacity=75); /* For IE8 and earlier */
-    color: rgb(37, 195, 23); 
+  max-width: 10em;
+  height: 29em;
     
+    color: rgb(37, 195, 23); 
+    margin-bottom: 0%
    
     
 

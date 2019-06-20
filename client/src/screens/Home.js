@@ -62,8 +62,8 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
+<div>
 
-<body>
 <div id='cloud-scroll'></div>
 
       <div className="container">
@@ -75,7 +75,7 @@ class SignUpForm extends React.Component {
   
 
         <h1>Welcome to</h1>
-    
+        
         <div className="col-lg-12">
 
 
@@ -116,20 +116,21 @@ class SignUpForm extends React.Component {
         <div class="col-lg-6">
 
        <div id="form2">
-  
-    
-        <Login />
-
-
+       <Login />
        
-       </div>  </div> 
+    
+        
+        </div>  </div> 
         </div> 
         </div>    
         </div>
         </div>
+       
+
         </div>
        
-        </body>
+       
+        </div>
 
     );
   }
