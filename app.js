@@ -7,7 +7,8 @@ var models = require("./models");
 var cors = require("cors");
 
 var indexRouter = require("./routes/index");
-var fruitRouter = require("./routes/fruits");
+var fruitRouter = require("./routes/fruit");
+var postRouter = require("./routes/post");
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/fruit", fruitRouter);
+app.use("/post", postRouter);
 
 models.sequelize.sync().then(function() {
   console.log("DB Sync'd up");

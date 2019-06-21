@@ -50,12 +50,13 @@ router.delete("/:id", function (req, res, next) {
 router.post("/", function (req, res, next) {
   let newFruit = new models.Fruit();
   newFruit.name = req.body.name;
+  newFruit.description = req.body.description;
   newFruit.save().then(fruit => res.json(fruit));
 });
 
 router.post("/edit/", function (req, res, next) {
 
-  let newName = "" + req.body.name + "";
+  let newName = req.body.name;
   let fruitId = parseInt(req.body.id);
 
   models.Fruit.update({
