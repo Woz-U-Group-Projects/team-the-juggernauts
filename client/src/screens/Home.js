@@ -61,7 +61,7 @@ class SignUpForm extends React.Component {
   render() {
     return (
       <div>
-        <div id='cloud-scroll'></div>
+        {/* <div id='cloud-scroll'></div> */}
         <div className="container">
           <Header title="Welcome!" />
           <h1>Welcome to</h1>

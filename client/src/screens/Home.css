@@ -18,3 +18,19 @@ input {
   animation-duration: 3s;
   animation-fill-mode: forwards;
 }
+
+#cloud-scroll {
+  background: url("http://9a2e1a2047765d2a004e-e6d2db425d8d4f2619e5cee56a48bcef.r55.cf2.rackcdn.com/clouds.png")  repeat-x;
+ opacity: .6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  position: absolute;
+  -webkit-animation: 900000s backgroundScroll infinite linear;
+  -moz-animation: 900000s backgroundScroll infinite linear;
+  -o-animation: 900000s backgroundScroll infinite linear;
+  -ms-animation: 900000s backgroundScroll infinite linear;
+  animation: 900000s backgroundScroll infinite linear;
+}
