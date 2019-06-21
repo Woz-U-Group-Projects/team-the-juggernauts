@@ -29,7 +29,7 @@ class Post extends React.Component {
             .then(res => {
                 this.setState({ newPost: "" }); //Reset new fruit field to blank.
                 this.getPost();
-                this.props.history.push("/posts");
+                // this.props.history.push("/posts");
             });
     }
 
