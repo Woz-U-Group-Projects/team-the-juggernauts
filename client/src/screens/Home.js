@@ -4,29 +4,29 @@ import Header from '../components/Header';
 // import { stringify } from 'querystring';
 import axios from "axios";
 import Login from './Login';
-
-
+import './Home.css';
 
 const Home = () => <SignUpForm />;
 
 class SignUpForm extends React.Component {
-  constructor(props) {
-    super(props)
-
-
-
-    this.firstName = React.createRef();
-    this.lastName = React.createRef();
-    this.emailName = React.createRef();
-    // this.userName = React.createRef();
-    this.passName = React.createRef();
-    this.petsName = React.createRef();
-    this.petsToy = React.createRef();
-    this.petsBreed = React.createRef();
-    this.petsTown = React.createRef();
-    this.petsPlace = React.createRef();
-
+  state = {
+    firstName: '',
+    lastName: '',
+    emailName: '',
+    passName: '',
+    petsName: '',
+    petsToy: '',
+    petsBreed: '',
+    petsTown: '',
+    petsPlace: ''
   }
+
+  updateInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
   getUser() {
     axios.get("http://localhost:3001/users").then(res => {
       const user = res.data;
@@ -38,27 +38,25 @@ class SignUpForm extends React.Component {
     //this.getUser();
   }
 
-  submitUser() {
-    axios
-      .post("http://localhost:3001/users", {
-        name: this.firstName.current.value,
-        lname: this.lastName.current.value,
-        ename: this.emailName.current.value,
-        // uname: this.userName.current.value,
-        passname: this.passName.current.value,
-        pname: this.petsName.current.value,
-        tname: this.petsToy.current.value,
-        bname: this.petsBreed.current.value,
-        twname: this.petsTown.current.value,
-        ppname: this.petsPlace.current.value,
+  // submitUser() {
+  //   axios
+  //     .post("http://localhost:3001/users", {
+  //       name: this.firstName.current.value,
+  //       lname: this.lastName.current.value,
+  //       ename: this.emailName.current.value,
+  //       passname: this.passName.current.value,
+  //       pname: this.petsName.current.value,
+  //       tname: this.petsToy.current.value,
+  //       bname: this.petsBreed.current.value,
+  //       twname: this.petsTown.current.value,
+  //       ppname: this.petsPlace.current.value,
 
-      })
-      .then(res => {
-        this.setState({ newUser: "" });
-        this.getUser();
-      });
-  }
-  //
+  //     })
+  //     .then(res => {
+  //       this.setState({ newUser: "" });
+  //       this.getUser();
+  //     });
+  // }
 
   render() {
     return (
@@ -136,7 +134,6 @@ class SignUpForm extends React.Component {
   }
 }
 //ReactDOM.render(<SignUpForm />, document.getElementById('root'));
-
 
 export default Home;
 
