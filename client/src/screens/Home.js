@@ -98,6 +98,7 @@ class SignUpForm extends React.Component {
         <p><input className="inputid" type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
         <p><input className="inputid" type='email' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
         {/* <p><input type='text' placeholder='User Name' uname='userName' ref = {this.userName}/></p> */}
+<<<<<<< Updated upstream
         <p><input className="inputid" type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
         <p><input className="inputid" type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
         <p><input className="inputid" type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
@@ -130,6 +131,17 @@ class SignUpForm extends React.Component {
        
         </div>
 
+=======
+        <p><input type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
+        <p><input type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
+        <p><input type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
+        <p><input type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
+        <p><input type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
+        <p><input type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
+        <p><button onClick={() => this.submitUser()}>Submit</button></p>
+        <Login />
+       </div>
+>>>>>>> Stashed changes
     );
   }
 }
