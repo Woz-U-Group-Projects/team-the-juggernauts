@@ -62,75 +62,75 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-<div>
+      <div>
 
-{/* <div id='cloud-scroll'></div> */}
+        {/* <div id='cloud-scroll'></div> */}
 
-      <div className="container">
+        <div className="container">
 
 
 
-        <Header title="Welcome!" />
+          <Header title="Welcome!" />
 
-  
 
-        <h1>Welcome to</h1>
-        
-        <div className="col-lg-12">
+
+          <h1>Welcome to</h1>
+
+          <div className="col-lg-12">
 
 
 
             <div className="container-fluid" id="container3">
-                <div className="hero-image">
+              <div className="hero-image">
 
-                </div>
-                <div className="hero-text">A wonderful place of fun and play for your pets
+              </div>
+              <div className="hero-text">A wonderful place of fun and play for your pets
 
      </div> </div>
-   <p id="pone">
-   </p>
+            <p id="pone">
+            </p>
             <div className="all" >
-  <div class="row">
-    <div class="col-lg-6">
-<div id="form1">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div id="form1">
 
-        <h1>Please Sign Up!</h1>
+                    <h1>Please Sign Up!</h1>
 
-        <p><input className="inputid" type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
-        <p><input className="inputid" type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
-        <p><input className="inputid" type='email' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
-        {/* <p><input type='text' placeholder='User Name' uname='userName' ref = {this.userName}/></p> */}
-        <p><input className="inputid" type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
-        <p><input  className="inputid"type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
-        <p><input className="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
-        <p><button className="inputid" onClick={() => this.submitUser()}>Submit</button></p>
-        </div>
-       
-        
-       
-        <p id="ptwo" >A Great way to explore your community find friends and neighbors with similiar intrests and likes </p>
+                    <p><input className="inputid" type='text' placeholder='First Name' name='firstName' ref={this.firstName} /></p>
+                    <p><input className="inputid" type='text' placeholder='Last Name' lname='lastName' ref={this.lastName} /></p>
+                    <p><input className="inputid" type='email' placeholder='Email / User Name' ename='emailName' ref={this.emailName} /></p>
+                    {/* <p><input type='text' placeholder='User Name' uname='userName' ref = {this.userName}/></p> */}
+                    <p><input className="inputid" type='password' placeholder='Password' passname='passName' ref={this.passName} /></p>
+                    <p><input className="inputid" type='text' placeholder='Pets Name' pname='petsName' ref={this.petsName} /></p>
+                    <p><input className="inputid" type='text' placeholder='Pets Favorite Toy' tname='petsToy' ref={this.petsToy} /></p>
+                    <p><input className="inputid" type='text' placeholder='Pets Breed' bname='petsBreed' ref={this.petsBreed} /></p>
+                    <p><input className="inputid" type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
+                    <p><input className="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
+                    <p><button className="inputid" onClick={() => this.submitUser()}>Submit</button></p>
+                  </div>
 
-        <div class="col-lg-6">
 
-       <div id="form2">
-       <Login />
-       
-    
-        
-        </div>  </div> 
-        </div> 
-        </div>    
-        </div>
-        </div>
-       
+
+                  <p id="ptwo" >A Great way to explore your community find friends and neighbors with similiar intrests and likes </p>
+
+                  <div class="col-lg-6">
+
+                    <div id="form2">
+                      <Login />
+
+
+
+                    </div>  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
         </div>
-       
-       
-        </div>
+
+
+      </div>
 
     );
   }

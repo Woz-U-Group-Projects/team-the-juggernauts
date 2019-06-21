@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import axios from "axios";
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 class Post extends React.Component {
@@ -27,7 +27,7 @@ class Post extends React.Component {
         axios
             .post("http://localhost:3001/posts", { post_body: this.state.newPost })
             .then(res => {
-                this.setState({ newPost: "" }); //Reset new fruit field to blank.
+                this.setState({ newPost: "" });
                 this.getPost();
                 // this.props.history.push("/posts");
             });
@@ -35,10 +35,10 @@ class Post extends React.Component {
 
     searchPost(searchTerm) {
         if (searchTerm === "") {
-            this.setState({ searchPost: "" }); //Clearing search fruit eliminates odd behavior when clearing search field.
+            this.setState({ searchPost: "" });
             this.getPost();
         } else {
-            this.setState({ searchPost: searchTerm }); //This is necessary or text input will hold only one character.
+            this.setState({ searchPost: searchTerm });
             axios.get("http://localhost:3001/posts/search/" + searchTerm)
                 .then(res => {
                     const post = res.data;
@@ -103,8 +103,4 @@ class Post extends React.Component {
     }
 }
 
-export default withRouter( Post);
-
-// Fruit to Post
-// newFruit to newPost
-// searchFruits searchPost
+export default withRouter(Post);
