@@ -4,7 +4,7 @@ import React from 'react';
 // import { stringify } from 'querystring';
 import axios from "axios";
 import Login from './Login';
-import logo from "./logo"
+// import logo from "./logo"
 
 
 const Home = () => <SignUpForm />;
