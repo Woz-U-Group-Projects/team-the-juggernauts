@@ -76,7 +76,7 @@ class SignUpForm extends React.Component {
   
 
         <h1>Welcome to</h1>
-        
+        <row>
         <div className="col-lg-12">
 
 
@@ -85,12 +85,16 @@ class SignUpForm extends React.Component {
                 <div className="hero-image">
 
                 </div>
-                <div className="hero-text">
+                
+              
+     </div> </div>  </row>
+   <p id="pone" className='jello'>A wonderful place of fun and play for your pets</p>
 
-     </div> </div>
-   <p id="pone">A wonderful place of fun and play for your pets
-   </p>
-            <div className="row">
+   <p id="ptwo" >A Great way to explore your community find friends and neighbors with similiar intrests and likes </p>
+       
+
+   <container>
+            <row>
     <div class="col-lg-6">
 <div id="form1">
 
@@ -107,17 +111,22 @@ class SignUpForm extends React.Component {
         <p><input className="inputid" type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
         <p><input className="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
         <p><button className="inputid" onClick={() => this.submitUser()}>Submit</button></p>
-        
+       </div>
+       </div>
+       
+    <div class="col-lg-6">
         <Login />
-        <p id="ptwo" >A Great way to explore your community find friends and neighbors with similiar intrests and likes </p>
+       
+       
         </div>
-        </div>
-       <div className='all'></div>
+        </row>
+    
         
+       <div className='all'></div>
+       </container>
         </div> 
-        </div>    
         </div>
-        </div>
+       
        
 
         
