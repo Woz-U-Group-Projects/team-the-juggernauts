@@ -4,7 +4,7 @@ import Header from '../components/Header';
 // import { stringify } from 'querystring';
 import axios from "axios";
 import Login from './Login';
-
+import './home.css';
 
 
 const Home = () => <SignUpForm />;
@@ -63,6 +63,7 @@ class SignUpForm extends React.Component {
   render() {
     return (
 <div>
+  
 
 <div id='cloud-scroll'></div>
 
@@ -84,13 +85,12 @@ class SignUpForm extends React.Component {
                 <div className="hero-image">
 
                 </div>
-                <div className="hero-text">A wonderful place of fun and play for your pets
+                <div className="hero-text">
 
      </div> </div>
-   <p id="pone">
+   <p id="pone">A wonderful place of fun and play for your pets
    </p>
-            <div className="all" >
-  <div class="row">
+            <div className="row">
     <div class="col-lg-6">
 <div id="form1">
 
@@ -107,30 +107,22 @@ class SignUpForm extends React.Component {
         <p><input className="inputid" type='text' placeholder='Pets Town' twname='petsTown' ref={this.petsTown} /></p>
         <p><input className="inputid" type='text' placeholder='Pets Favorite Place' ppname='petsPlace' ref={this.petsPlace} /></p>
         <p><button className="inputid" onClick={() => this.submitUser()}>Submit</button></p>
-        </div>
-       
         
-       
+        <Login />
         <p id="ptwo" >A Great way to explore your community find friends and neighbors with similiar intrests and likes </p>
-
-        <div class="col-lg-6">
-
-       <div id="form2">
-       <Login />
-       
-    
+        </div>
+        </div>
+       <div className='all'></div>
         
-        </div>  </div> 
         </div> 
         </div>    
         </div>
         </div>
        
 
-        </div>
+        
        
        
-        </div>
 
     );
   }
