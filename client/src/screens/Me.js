@@ -13,7 +13,7 @@ class Post extends React.Component {
     };
 
     getPost() {
-        axios.get("http://localhost:5000/fruit").then(res => {
+        axios.get("http://localhost:3001/posts").then(res => {
             const post = res.data;
             this.setState({ post });
         });
