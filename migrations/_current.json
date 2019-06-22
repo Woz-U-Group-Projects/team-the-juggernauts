@@ -62,7 +62,7 @@
                     "seqType": "Sequelize.STRING"
                 },
                 "pets_name": {
-                    "allowNull": false,
+                    "allowNull": true,
                     "field": "pets_name",
                     "seqType": "Sequelize.STRING"
                 },

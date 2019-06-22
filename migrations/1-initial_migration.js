@@ -13,7 +13,7 @@ var Sequelize = require('sequelize');
 var info = {
     "revision": 1,
     "name": "initial_migration",
-    "created": "2019-06-21T20:12:45.895Z",
+    "created": "2019-06-22T00:01:54.431Z",
     "comment": ""
 };
 
@@ -86,7 +86,7 @@ var migrationCommands = [{
                 "pets_name": {
                     "type": Sequelize.STRING,
                     "field": "pets_name",
-                    "allowNull": false
+                    "allowNull": true
                 },
                 "fav_toy": {
                     "type": Sequelize.STRING,

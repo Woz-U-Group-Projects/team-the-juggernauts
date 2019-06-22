@@ -25,7 +25,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     pets_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     fav_toy: {
       type: DataTypes.STRING,
