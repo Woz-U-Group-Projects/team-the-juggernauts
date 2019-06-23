@@ -4,62 +4,63 @@ import axios from "axios";
 
 class App extends Component {
   state = {
-    fruit: [],
-    newFruit: "",
-    searchFruit: ""
+    pet_id: 1,
+    post: [],
+    newPost: "",
+    searchPost: ""
   };
 
-  getFruit() {
-    axios.get("http://localhost:5000/fruit").then(res => {
-      const fruit = res.data;
-      this.setState({ fruit });
+  getPosts() {
+    axios.get("http://localhost:5000/post").then(res => {
+      const post = res.data;
+      this.setState({ post });
     });
   }
 
   componentDidMount() {
-    this.getFruit();
+    this.getPosts();
   }
 
-  submitFruit() {
+  submitPost() {
     axios
-      .post("http://localhost:5000/fruit", { name: this.state.newFruit })
+      .post("http://localhost:5000/post", { post_body: this.state.newPost })
       .then(res => {
-        this.setState({ newFruit: "" }); //Reset new fruit field to blank.
-        this.getFruit();
+        this.setState({ newPost: "" }); //Reset new post field to blank.
+        this.getPosts();
       });
   }
 
-  searchFruit(searchTerm) {
+  searchPost(searchTerm) {
     if (searchTerm === "") {
-      this.setState({ searchFruit: "" }); //Clearing search fruit eliminates odd behavior when clearing search field.
-      this.getFruit();
+      this.setState({ searchPost: "" }); //Clearing search post eliminates odd behavior when clearing search field.
+      this.getPosts();
     } else {
-      this.setState({ searchFruit: searchTerm }); //This is necessary or text input will hold only one character.
-      axios.get("http://localhost:5000/fruit/search/" + searchTerm)
+      this.setState({ searchPost: searchTerm }); //This is necessary or text input will hold only one character.
+      axios.get("http://localhost:5000/post/search/" + searchTerm)
         .then(res => {
-          const fruit = res.data;
-          this.setState({ fruit });
+          const post = res.data;
+          this.setState({ post });
         });
     }
   }
 
-  deleteFruit(id) {
-    axios.delete("http://localhost:5000/fruit/" + id + "")
+  deletePost(id) {
+    axios.delete("http://localhost:5000/post/" + id + "")
       .then(res => {
         console.log(res.body);
-        this.getFruit();
+        this.getPosts();
       });
   }
 
-  editFruit(id, name) {
-    let result = prompt('Edit Fruit Name', name);
-    if (result !=null ) name = result;
+  editPost(id, post_body) {
+    let result = prompt('Edit Post Body Name', post_body);
+    if (result != null) post_body = result;
     axios
-      .post("http://localhost:5000/fruit/edit",
-        { "id": id, "name": name })
-      .then(res => { 
+      .post("http://localhost:5000/post/edit",
+        { "id": id, "pet_id": this.state.pet_id, "post_body": post_body })
+      .then(res => {
         console.log(res);
-        this.getFruit(); //Refresh
+        this.getPosts(); //Refresh
       });
   }
 
@@ -67,33 +68,54 @@ class App extends Component {
     return (
       <div>
 
-        <h3>Search</h3>
+        <h3>Add Post</h3>
         <input
-          value={this.state.searchFruit}
-          onChange={evt => this.searchFruit(evt.target.value)}
+          value={this.state.newPost}
+          onChange={evt => this.setState({ newPost: evt.target.value })}
         />
-        <button onClick={() => this.searchFruit("")}>Reset</button>
+        <button onClick={() => this.submitPost()}>Submit</button>
 
-        <h1>Fruits:</h1>
-        <ul>
-          {this.state.fruit.map(f => (
+        <h3>Search Existing Post Body</h3>
+        <input
+          value={this.state.searchPost}
+          onChange={evt => this.searchPost(evt.target.value)}
+        />
+        <button onClick={() => this.searchPost("")}>Reset</button>
+        <h1>Posts:</h1>
+        <ol>
+          {this.state.post.map(f => (
             <li key={f.id}>
-              <button onClick={() => this.deleteFruit(f.id)}>X</button>
-              <button onClick={() => this.editFruit(f.id, f.name)}>Edit</button>
-              <nbsp /> {f.name}
+              {(() => {
+                if (f.post_body && !f.link_url) {
+                  return <p>{f.post_body}</p>
+                }
+                if (f.post_body && f.link_url) {
+                  return <a href={f.link_url}>{f.post_body}</a>
+                }
+                if (f.link_url) {
+                  return <a href={f.link_url}>{f.link_url}</a>
+                }
+              })()}
+              {(() => {
+                if (f.img_url) {
+                  return <a href={f.img_url}><img src={f.img_url}></img></a>
+                }
+              })()}
               <ul>
-                <li>{f.description}</li>
+                <li>Post Element Diagnostics:</li>
+                <ul>
+                  <li>id: {f.id}</li>
+                  <li>post_body: {f.post_body}</li>
+                  <li>pet_id: {f.pet_id}</li>
+                  <li>link_url: {f.link_url}</li>
+                  <li>img_url: {f.img_url} </li>
+                  <li>createdAt: {f.createdAt}</li>
+                  <li>updatedAt: {f.updatedAt}</li>
+                </ul>
               </ul>
             </li>
           ))}
-        </ul>
-
-        <h3>Add Fruit</h3>
-        <input
-          value={this.state.newFruit}
-          onChange={evt => this.setState({ newFruit: evt.target.value })}
-        />
-        <button onClick={() => this.submitFruit()}>Submit</button>
+        </ol>
       </div>
     );
   }
