@@ -233,7 +233,7 @@ background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ 
    #form2{
     flex: 100%;
      
-     
+     display: inline-block;
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -370,7 +370,7 @@ background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ 
     transform-origin: center;
   }
 
-  @charset "UTF-8";
+   
 
 /*!
  * animate.css -http://daneden.me/animate
