@@ -98,7 +98,7 @@ var opacity={opacity:1}
       <div className="container">
 
       
-        <Header title="" />
+        {/* <Header title="" /> */}
 
   
 
@@ -109,7 +109,7 @@ var opacity={opacity:1}
 
 
             <div className="container-fluid" id="container3">
-                <img class="heartbeat" id='rainbow'style ={opacity} src={rainbowplay} alt="cutie"></img>
+                <img className="heartbeat" id='rainbow'style ={opacity} src={rainbowplay} alt="cutie"></img>
                 <img  className ='logo' id='logo' src={logo}alt='logo'></img>
                 <img  className ='image' src={smiley}alt='cutie'></img>
                 <img  className ='image' src={cutie}alt='cutie'></img>
