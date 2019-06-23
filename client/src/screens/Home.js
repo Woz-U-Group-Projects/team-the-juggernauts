@@ -83,8 +83,8 @@ var opacity={opacity:1}
     return (
 <div>
   
-<div className='cloud-scroll'>
-      </div>
+   <div className='cloud-scroll'>
+       </div>
                
 <img  className ='slide-in-elliptic-top-fwd' id='img2' src={turtle}alt='turtle'></img>
 <img  className ='slide-in-elliptic-top-fwd' id='img2' src={fish}alt='fish'></img>
