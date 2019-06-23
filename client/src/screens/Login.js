@@ -50,13 +50,18 @@ class Login extends React.Component {
     }
 
     render() {
+        var inLineStyle={display:'inline-block'}
         return (
             <div className="Login">
-                <form onSubmit={this.handleChange}>
-                    <h1>Login</h1>
-                    <p><input type="email" placeholder='Email / User Name' ename='emailName' ref={this.emailName} onChange={this.handleChange}></input></p>
-                    <p><input type='password' placeholder='Password' passname='passName' ref={this.passName} onChange={this.handleChange} /></p>
-                    <p><button onClick={(event) => this.submitLogin(event)}>Login</button></p>
+                <form style ={inLineStyle} onSubmit={this.handleChange}>
+                    <h1 className="logintext"></h1>
+                   
+                    <p><input className="inputid2" type="text" placeholder='Email / User Name' ename='emailName' ref={this.emailName} onChange={this.handleChange}></input></p>
+                    
+                   
+                    <p><input className="inputid2" type='text' placeholder='Password' passname='passName' ref={this.passName} onChange={this.handleChange} /></p>
+                    
+                    <p><button className="inputid2" onClick={() => this.submitLogin()}>Login</button></p>
                 </form>
             </div>
 
