@@ -23,7 +23,7 @@ class App extends Component {
 
   submitPost() {
     axios
-      .post("http://localhost:5000/post", { post_body: this.state.newPost })
+      .post("http://localhost:5000/post", { post_body: this.state.newPost, pet_id: 1 })
       .then(res => {
         this.setState({ newPost: "" }); //Reset new post field to blank.
         this.getPosts();
@@ -36,7 +36,7 @@ class App extends Component {
       this.getPosts();
     } else {
       this.setState({ searchPost: searchTerm }); //This is necessary or text input will hold only one character.
-      axios.get("http://localhost:5000/post/search/" + searchTerm)
+      axios.get("http://localhost:5000/post/search-body/" + searchTerm)
         .then(res => {
           const post = res.data;
           this.setState({ post });
