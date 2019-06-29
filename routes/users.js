@@ -20,7 +20,7 @@ router.post("/", function (req, res, next) {
   newUser.Email_User_Name = req.body.ename;
   // newUser.user_name = req.body.uname;
   newUser.Password = req.body.passname;
-  newUser.pets_name = req.body.petsname;
+  newUser.pets_name = req.body.pname;
   newUser.fav_toy = req.body.tname;
   newUser.breed = req.body.bname;
   newUser.hometown = req.body.twname;

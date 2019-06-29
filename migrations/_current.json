@@ -57,7 +57,7 @@
                     "seqType": "Sequelize.STRING"
                 },
                 "Password": {
-                    "allowNull": false,
+                    "allowNull": true,
                     "field": "Password",
                     "seqType": "Sequelize.STRING"
                 },
