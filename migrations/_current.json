@@ -1,5 +1,35 @@
 {
     "tables": {
+        "Posts": {
+            "tableName": "Posts",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "pet_id": {
+                    "allowNull": false,
+                    "field": "pet_id",
+                    "seqType": "Sequelize.INTEGER.UNSIGNED"
+                },
+                "post_body": {
+                    "field": "post_body",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "img_url": {
+                    "field": "img_url",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "link_url": {
+                    "field": "link_url",
+                    "seqType": "Sequelize.TEXT"
+                }
+            },
+            "indexes": []
+        },
         "users": {
             "tableName": "users",
             "schema": {
@@ -22,16 +52,17 @@
                 },
                 "Email_User_Name": {
                     "unique": true,
+                    "allowNull": true,
                     "field": "Email_User_Name",
                     "seqType": "Sequelize.STRING"
                 },
                 "Password": {
-                    "unique": true,
+                    "allowNull": false,
                     "field": "Password",
                     "seqType": "Sequelize.STRING"
                 },
                 "pets_name": {
-                    "allowNull": false,
+                    "allowNull": true,
                     "field": "pets_name",
                     "seqType": "Sequelize.STRING"
                 },

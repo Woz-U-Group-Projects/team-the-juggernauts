@@ -16,16 +16,16 @@ module.exports = function (sequelize, DataTypes) {
     },
     Email_User_Name: {
       type: DataTypes.STRING,
-      unique: true
-      // allowNull: true
+      unique: true,
+      allowNull: true
     },
     Password: {
       type: DataTypes.STRING,
-      unique: true
+      allowNull: false
     },
     pets_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     fav_toy: {
       type: DataTypes.STRING,
