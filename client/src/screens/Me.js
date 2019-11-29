@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import axios from "axios";
 import { withRouter } from 'react-router-dom';
-
+import './me.css';
 
 class Post extends React.Component {
     state = {
@@ -97,6 +97,13 @@ class Post extends React.Component {
                     onChange={evt => this.setState({ newPost: evt.target.value })}
                 />
                 <button onClick={() => this.submitPost()}>Submit</button>
+
+            <div className='cal'>
+                <input type= {Date}></input>
+                <input type={TimeRanges}></input>
+            </div>
+
+               
             </div>
         );
 
