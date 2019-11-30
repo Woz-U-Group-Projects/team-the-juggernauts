@@ -71,11 +71,11 @@ class Post extends React.Component {
             <div>
                 <Header title="Connect with friends!" />
                 <h3>Search</h3>
-                <input
+                <input className='searchInput'
                     value={this.state.searchPost}
                     onChange={evt => this.searchPost(evt.target.value)}
                 />
-                <button onClick={() => this.searchPost("")}>Reset</button>
+                <button className='resetButton' onClick={() => this.searchPost("")}>Reset</button>
 
                 <h1>Post:</h1>
                 <ul>
@@ -92,17 +92,13 @@ class Post extends React.Component {
                 </ul>
 
                 <h3>Add Post</h3>
-                <input
+                <input className='inputSubmit'
                     value={this.state.newPost}
                     onChange={evt => this.setState({ newPost: evt.target.value })}
                 />
-                <button onClick={() => this.submitPost()}>Submit</button>
+                <button className='submitbutton' onClick={() => this.submitPost()}>Submit</button>
 
-            <div className='cal'>
-                <input type= {Date}></input>
-                <input type={TimeRanges}></input>
-            </div>
-
+        
                
             </div>
         );
