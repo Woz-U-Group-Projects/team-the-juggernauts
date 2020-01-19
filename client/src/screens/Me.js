@@ -69,6 +69,7 @@ class Post extends React.Component {
     render() {
         return (
             <div>
+                <div className= 'me'>
                 <Header title="Connect with friends!" />
                 <h3>Search</h3>
                 <input className='searchInput'
@@ -99,7 +100,7 @@ class Post extends React.Component {
                 <button className='submitbutton' onClick={() => this.submitPost()}>Submit</button>
 
         
-               
+                </div>
             </div>
         );
 
